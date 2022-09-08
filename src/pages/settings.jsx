@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+<<<<<<< Updated upstream
 import './style/settings.css';
+=======
+>>>>>>> Stashed changes
 
 class Settings extends Component {
   render() {
     return (
+<<<<<<< Updated upstream
       <form className="sett_ings">
         <h1 data-testid="settings-title">Configurações</h1>
 
@@ -53,6 +57,11 @@ class Settings extends Component {
           Play
         </button>
       </form>
+=======
+      <div>
+        <h1 data-testid="settings-title">Configuração</h1>
+      </div>
+>>>>>>> Stashed changes
     );
   }
 }
