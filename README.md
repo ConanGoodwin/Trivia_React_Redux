@@ -55,8 +55,8 @@ Nesse projeto, você será capaz de:
   <summary><strong>🗓 Data de Entrega</strong></summary><br />
   
   * Este projeto é em grupo;
-  * São `X` dias de projeto;
-  * Data para entrega final do projeto: `21/09/2022 13:50`.
+  * São `5` dias de projeto;
+  * Data para entrega final do projeto: `21/09/2022 14:00`.
 
 </details>
 
