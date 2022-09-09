@@ -25,11 +25,14 @@ class Game extends Component {
         },
       ],
       isAnswer: false,
+<<<<<<< HEAD
       score: 1,
       time: 30,
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
       indexResp: -1,
+=======
+>>>>>>> fde2d08... Requisito 10
     };
   }
 
@@ -150,6 +153,7 @@ class Game extends Component {
     }
   };
 
+<<<<<<< HEAD
   decodeEntity(inputStr) {
     const textarea = document.createElement('textarea');
     textarea.innerHTML = inputStr;
@@ -159,6 +163,28 @@ class Game extends Component {
   render() {
     const { randomAnswer, indexQuestion, isAnswer,
       wrongClass, correctClass, indexResp } = this.state;
+=======
+  handleClickAnswer = () => {
+    this.setState({ isAnswer: true });
+  };
+
+  handleClickNext = () => {
+    const { indexQuestion } = this.state;
+    const { results } = this.props;
+    const MAX_QUESTIONS = 4;
+
+    if (indexQuestion < MAX_QUESTIONS) {
+      this.setState({ indexQuestion: indexQuestion + 1 }, () => {
+        this.shuffleAnswer(indexQuestion + 1, results);
+      });
+    } else {
+      // end game!
+    }
+  };
+
+  render() {
+    const { randomAnswer, indexQuestion, isAnswer } = this.state;
+>>>>>>> fde2d08... Requisito 10
     const { results, responseCode } = this.props;
     const START_INDEX = -1;
     const ERROR_API_CODE = 3;
@@ -199,6 +225,7 @@ class Game extends Component {
                           ? (
                             <BtnRespText
                               key={ index }
+<<<<<<< HEAD
                               id="correct-answer"
                               answer={ answer }
                               index={ index }
@@ -208,10 +235,19 @@ class Game extends Component {
                               correctClass={ correctClass }
                               indexResp={ indexResp }
                             />
+=======
+                              type="button"
+                              data-testid="correct-answer"
+                              onClick={ this.handleClickAnswer }
+                            >
+                              {item.answer}
+                            </button>
+>>>>>>> fde2d08... Requisito 10
                           )
                           : (
                             <BtnRespText
                               key={ index }
+<<<<<<< HEAD
                               id={ `wrong-answer-${indexWrongAnswer}` }
                               answer={ answer }
                               index={ index }
@@ -221,11 +257,20 @@ class Game extends Component {
                               correctClass={ wrongClass }
                               indexResp={ indexResp }
                             />
+=======
+                              type="button"
+                              data-testid={ `wrong-answer-${indexWrongAnswer}` }
+                              onClick={ this.handleClickAnswer }
+                            >
+                              {item.answer}
+                            </button>
+>>>>>>> fde2d08... Requisito 10
                           )
                       );
                     })
                   }
                 </div>
+<<<<<<< HEAD
                 <div className="btnNext">
                   {(isAnswer) && (
                     <button
@@ -238,6 +283,17 @@ class Game extends Component {
                     </button>
                   )}
                 </div>
+=======
+                {(isAnswer) && (
+                  <button
+                    type="button"
+                    data-testid="btn-next"
+                    onClick={ this.handleClickNext }
+                  >
+                    Next
+                  </button>
+                )}
+>>>>>>> fde2d08... Requisito 10
               </section>
             )
         }
