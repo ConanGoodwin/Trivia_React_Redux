@@ -42,6 +42,7 @@ class Game extends Component {
     await dispatch(fetchQuestion(token));
     this.setState({ indexQuestion: 0 }, () => {
       const { results, responseCode } = this.props;
+<<<<<<< HEAD
       if (responseCode === 0) {
         this.shuffleAnswer(0, results);
       }
@@ -109,6 +110,43 @@ class Game extends Component {
       });
     } else {
       history.push('/feedback');
+=======
+
+      if (responseCode === 0) {
+        this.shuffleAnswer(indexQuestion, results);
+      }
+    });
+  }
+
+  buildOrderAnswer = (index, array) => {
+    if (array.length === 0) return [];
+
+    let orderAnswer = [{ answer: array[index].correct_answer, isCorrect: true }];
+
+    array[index].incorrect_answers.forEach((item) => {
+      orderAnswer = [...orderAnswer, { answer: item, isCorrect: false }];
+    });
+
+    return orderAnswer;
+  };
+
+  shuffleAnswer = (index, array) => {
+    const RANGE = 0.5;
+    const TEMP = 3;
+    const randomIndexArray = [0, 1, 2, TEMP].sort(() => Math.random() - RANGE);
+    const randomBoolIndexArray = [0, 1].sort(() => Math.random() - RANGE);
+
+    const orderAnswer = this.buildOrderAnswer(index, array);
+
+    if (array[index].type === 'multiple') {
+      const disorderAnswer = randomIndexArray.map((i) => orderAnswer[i]);
+
+      this.setState({ randomAnswer: disorderAnswer });
+    } else if (array[index].type === 'boolean') {
+      const disorderAnswer = randomBoolIndexArray.map((i) => orderAnswer[i]);
+
+      this.setState({ randomAnswer: disorderAnswer });
+>>>>>>> db24d4a... resolvido Requisito 06
     }
   };
 
