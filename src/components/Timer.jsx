@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import './style/timer.css';
 
 const ONE_SECOND = 1000;
 const CRITICAL_TIME = 10;
+=======
+>>>>>>> e13e208... criando arquivo timer
 
 class Timer extends React.Component {
   constructor() {
     super();
+<<<<<<< HEAD
     this.state = {
       timerCount: 30,
     };
@@ -56,3 +60,13 @@ Timer.propTypes = {
 };
 
 export default connect()(Timer);
+=======
+  }
+
+  render() {
+    return (<h1>Timer</h1>);
+  }
+}
+
+export default connect(mapStateToProps)(Timer);
+>>>>>>> e13e208... criando arquivo timer
