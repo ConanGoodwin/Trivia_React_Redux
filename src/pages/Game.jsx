@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
 import { delToken } from '../services/saveToken';
 import Header from '../components/Header';
+<<<<<<< HEAD
 import Timer from '../components/Timer';
 import './style/Game.css';
 import BtnRespText from '../components/BtnRespText';
@@ -12,6 +13,8 @@ import BtnRespText from '../components/BtnRespText';
 const NORMAL_BTN = 'inicial';
 const CORRECT_BTN = 'correct';
 const WRONG_BTN = 'incorrect';
+=======
+>>>>>>> 781be95... Requisito 5 - adiciona header
 
 class Game extends Component {
   constructor() {
@@ -198,12 +201,16 @@ class Game extends Component {
     return (
       <main>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header />
         {!isAnswer && <Timer
           handleClickAnswer={ this.handleClickAnswer }
           setTime={ this.setTime }
         />}
 =======
+=======
+        <Header />
+>>>>>>> 781be95... Requisito 5 - adiciona header
         {(indexQuestion === 0) && (<p>new game</p>)}
 >>>>>>> b2ff96d... adicionado detalhe no paragrafo new game
         {
