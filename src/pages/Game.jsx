@@ -6,12 +6,15 @@ import { fetchQuestion, addPlayerScore } from '../redux/actions';
 import { delToken } from '../services/saveToken';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
+<<<<<<< HEAD
 import './style/Game.css';
 import BtnRespText from '../components/BtnRespText';
 
 const NORMAL_BTN = 'inicial';
 const CORRECT_BTN = 'correct';
 const WRONG_BTN = 'incorrect';
+=======
+>>>>>>> e07b5e5... isAnswer moldando as coisas na tela
 
 class Game extends Component {
   constructor() {
@@ -141,7 +144,13 @@ class Game extends Component {
 =======
 =======
         <Header />
+<<<<<<< HEAD
 >>>>>>> 781be95... Requisito 5 - adiciona header
+=======
+        {!isAnswer && <Timer
+          handleClickAnswer={ this.handleClickAnswer }
+        />}
+>>>>>>> e07b5e5... isAnswer moldando as coisas na tela
         {(indexQuestion === 0) && (<p>new game</p>)}
 >>>>>>> b2ff96d... adicionado detalhe no paragrafo new game
         {
@@ -187,6 +196,7 @@ class Game extends Component {
                               type="button"
                               data-testid="correct-answer"
                               onClick={ this.handleClickAnswer }
+                              disabled={ isAnswer }
                             >
                               {item.answer}
                             </button>
@@ -209,6 +219,7 @@ class Game extends Component {
                               type="button"
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
                               onClick={ this.handleClickAnswer }
+                              disabled={ isAnswer }
                             >
                               {item.answer}
                             </button>
