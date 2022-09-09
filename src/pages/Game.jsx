@@ -324,9 +324,12 @@ Game.propTypes = {
     type: PropTypes.string,
     incorrect_answers: PropTypes.arrayOf(PropTypes.string),
   })).isRequired,
+<<<<<<< HEAD
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
+=======
+>>>>>>> f8a3d01... corrige erro PropTypes results
 };
 
 const mapStateToProps = ({ token: { tokenObj }, questions }) => {
