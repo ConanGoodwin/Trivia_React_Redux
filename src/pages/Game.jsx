@@ -100,11 +100,15 @@ class Game extends Component {
     const { results, history } = this.props;
     const MAX_QUESTIONS = 4;
     if (indexQuestion < MAX_QUESTIONS) {
+<<<<<<< HEAD
       this.setState({ indexQuestion: indexQuestion + 1,
         isAnswer: false,
         wrongClass: NORMAL_BTN,
         correctClass: NORMAL_BTN,
         indexResp: -1 }, () => {
+=======
+      this.setState({ indexQuestion: indexQuestion + 1, isAnswer: false }, () => {
+>>>>>>> 36b040f... concertando o isAnswer para o next
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
