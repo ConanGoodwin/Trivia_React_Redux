@@ -6,6 +6,7 @@ import './style/header.css';
 
 class Header extends React.Component {
   render() {
+<<<<<<< HEAD
     const { name, email, score } = this.props;
 
     return (
@@ -28,6 +29,19 @@ class Header extends React.Component {
             </span>
           </div>
         </p>
+=======
+    const { name, email, totalHits } = this.props;
+
+    return (
+      <header>
+        <img
+          src={ `https://www.gravatar.com/avatar/${md5(email).toString()}` }
+          alt="avatar"
+          data-testid="header-profile-picture"
+        />
+        <p data-testid="header-player-name">{name}</p>
+        <p data-testid="header-score">{totalHits}</p>
+>>>>>>> e214ae3... Requisito 13
 
       </header>
     );
@@ -37,13 +51,21 @@ class Header extends React.Component {
 const mapStateToProps = (state) => ({
   name: state.user.name,
   email: state.user.email,
+<<<<<<< HEAD
   ...state.player,
+=======
+  ...state.score,
+>>>>>>> e214ae3... Requisito 13
 });
 
 Header.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+<<<<<<< HEAD
   score: PropTypes.number.isRequired,
+=======
+  totalHits: PropTypes.number.isRequired,
+>>>>>>> e214ae3... Requisito 13
 };
 
 export default connect(mapStateToProps)(Header);

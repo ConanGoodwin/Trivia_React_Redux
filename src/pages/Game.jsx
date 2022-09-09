@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
+<<<<<<< HEAD
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
+=======
+import { fetchQuestion, userScore } from '../redux/actions';
+>>>>>>> e214ae3... Requisito 13
 import { delToken } from '../services/saveToken';
 <<<<<<< HEAD
 import Header from '../components/Header';
+<<<<<<< HEAD
 import Timer from '../components/Timer';
 <<<<<<< HEAD
 import './style/Game.css';
@@ -18,6 +23,9 @@ const WRONG_BTN = 'incorrect';
 >>>>>>> e07b5e5... isAnswer moldando as coisas na tela
 =======
 >>>>>>> 0bb80a3... teste2
+=======
+// import user from '../redux/reducers/user';
+>>>>>>> e214ae3... Requisito 13
 
 class Game extends Component {
   constructor() {
@@ -31,11 +39,15 @@ class Game extends Component {
         },
       ],
       isAnswer: false,
+<<<<<<< HEAD
       score: 1,
       time: 30,
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
       indexResp: -1,
+=======
+      score: 0,
+>>>>>>> e214ae3... Requisito 13
     };
   }
 
@@ -78,6 +90,7 @@ class Game extends Component {
     }
   };
 
+<<<<<<< HEAD
   handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here', i) => {
     this.setState({
       isAnswer: true,
@@ -95,6 +108,15 @@ class Game extends Component {
           const { time } = this.state;
           await dispatch(addPlayerScore(time, difficulty, score));
         });
+=======
+  handleClickAnswer = ({ target: { name } }) => {
+    this.setState({ isAnswer: true }, () => {
+      const { randomAnswer } = this.state;
+      if (name === randomAnswer[0].answer) {
+        this.setState((prevState) => ({
+          score: prevState.score + 1,
+        }));
+>>>>>>> e214ae3... Requisito 13
       }
     });
   };
@@ -103,7 +125,11 @@ class Game extends Component {
 
   handleClickNext = () => {
     const { indexQuestion } = this.state;
+<<<<<<< HEAD
     const { results, history } = this.props;
+=======
+    const { results, dispatch, history } = this.props;
+>>>>>>> e214ae3... Requisito 13
     const MAX_QUESTIONS = 4;
     if (indexQuestion < MAX_QUESTIONS) {
 <<<<<<< HEAD
@@ -118,7 +144,12 @@ class Game extends Component {
 >>>>>>> 36b040f... concertando o isAnswer para o next
 =======
       this.setState({ indexQuestion: indexQuestion + 1 }, () => {
+<<<<<<< HEAD
 >>>>>>> 0bb80a3... teste2
+=======
+        const { score } = this.state;
+        dispatch(userScore(score));
+>>>>>>> e214ae3... Requisito 13
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
@@ -205,6 +236,7 @@ class Game extends Component {
 =======
                               type="button"
                               data-testid="correct-answer"
+                              name={ item.answer }
                               onClick={ this.handleClickAnswer }
                             >
                               {item.answer}
@@ -227,6 +259,7 @@ class Game extends Component {
 =======
                               type="button"
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
+                              name={ item.answer }
                               onClick={ this.handleClickAnswer }
                             >
                               {item.answer}
@@ -283,6 +316,7 @@ Game.propTypes = {
 <<<<<<< HEAD
   })).isRequired,
 <<<<<<< HEAD
+<<<<<<< HEAD
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
@@ -292,6 +326,14 @@ Game.propTypes = {
 
   }).isRequired,
 >>>>>>> 0bb80a3... teste2
+=======
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+  tokenObj: PropTypes.shape({
+    token: PropTypes.string.isRequired,
+  }).isRequired,
+>>>>>>> e214ae3... Requisito 13
 };
 
 const mapStateToProps = ({ token: { tokenObj }, questions }) => {
