@@ -76,7 +76,7 @@ export default connect()(Timer);
   timeIsEnd = () => {
     const { handleClickAnswer } = this.props;
     clearInterval(this.setTimeCount);
-    handleClickAnswer();
+    handleClickAnswer({ target: { name: 'Timer' } });
   };
 
   render() {
