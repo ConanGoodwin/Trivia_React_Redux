@@ -11,6 +11,7 @@ import { delToken } from '../services/saveToken';
 <<<<<<< HEAD
 import Header from '../components/Header';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Timer from '../components/Timer';
 <<<<<<< HEAD
 import './style/Game.css';
@@ -26,6 +27,8 @@ const WRONG_BTN = 'incorrect';
 =======
 // import user from '../redux/reducers/user';
 >>>>>>> e214ae3... Requisito 13
+=======
+>>>>>>> 046454c... retira comentários desnecessários
 
 class Game extends Component {
   constructor() {
