@@ -5,7 +5,6 @@ import { Redirect } from 'react-router-dom';
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
 import { delToken } from '../services/saveToken';
 import Header from '../components/Header';
-<<<<<<< HEAD
 import Timer from '../components/Timer';
 import './style/Game.css';
 import BtnRespText from '../components/BtnRespText';
@@ -13,8 +12,6 @@ import BtnRespText from '../components/BtnRespText';
 const NORMAL_BTN = 'inicial';
 const CORRECT_BTN = 'correct';
 const WRONG_BTN = 'incorrect';
-=======
->>>>>>> 781be95... Requisito 5 - adiciona header
 
 class Game extends Component {
   constructor() {
@@ -28,33 +25,23 @@ class Game extends Component {
         },
       ],
       isAnswer: false,
-<<<<<<< HEAD
       score: 1,
       time: 30,
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
       indexResp: -1,
-=======
->>>>>>> fde2d08... Requisito 10
     };
   }
 
   async componentDidMount() {
     this.newGame();
   }
-<<<<<<< HEAD
-=======
-
-  newGame = async () => {
-    const { dispatch, token } = this.props;
->>>>>>> 1750ce6... refattorado para add função newGame para reuzo posterior
 
   newGame = async () => {
     const { dispatch, token } = this.props;
     await dispatch(fetchQuestion(token));
     this.setState({ indexQuestion: 0 }, () => {
       const { results, responseCode } = this.props;
-<<<<<<< HEAD
       if (responseCode === 0) {
         this.shuffleAnswer(0, results);
       }
@@ -122,47 +109,9 @@ class Game extends Component {
       });
     } else {
       history.push('/feedback');
-=======
-
-      if (responseCode === 0) {
-        this.shuffleAnswer(0, results);
-      }
-    });
-  };
-
-  buildOrderAnswer = (index, array) => {
-    if (array.length === 0) return [];
-
-    let orderAnswer = [{ answer: array[index].correct_answer, isCorrect: true }];
-
-    array[index].incorrect_answers.forEach((item) => {
-      orderAnswer = [...orderAnswer, { answer: item, isCorrect: false }];
-    });
-
-    return orderAnswer;
-  };
-
-  shuffleAnswer = (index, array) => {
-    const RANGE = 0.5;
-    const TEMP = 3;
-    const randomIndexArray = [0, 1, 2, TEMP].sort(() => Math.random() - RANGE);
-    const randomBoolIndexArray = [0, 1].sort(() => Math.random() - RANGE);
-
-    const orderAnswer = this.buildOrderAnswer(index, array);
-
-    if (array[index].type === 'multiple') {
-      const disorderAnswer = randomIndexArray.map((i) => orderAnswer[i]);
-
-      this.setState({ randomAnswer: disorderAnswer });
-    } else if (array[index].type === 'boolean') {
-      const disorderAnswer = randomBoolIndexArray.map((i) => orderAnswer[i]);
-
-      this.setState({ randomAnswer: disorderAnswer });
->>>>>>> db24d4a... resolvido Requisito 06
     }
   };
 
-<<<<<<< HEAD
   decodeEntity(inputStr) {
     const textarea = document.createElement('textarea');
     textarea.innerHTML = inputStr;
@@ -172,28 +121,6 @@ class Game extends Component {
   render() {
     const { randomAnswer, indexQuestion, isAnswer,
       wrongClass, correctClass, indexResp } = this.state;
-=======
-  handleClickAnswer = () => {
-    this.setState({ isAnswer: true });
-  };
-
-  handleClickNext = () => {
-    const { indexQuestion } = this.state;
-    const { results } = this.props;
-    const MAX_QUESTIONS = 4;
-
-    if (indexQuestion < MAX_QUESTIONS) {
-      this.setState({ indexQuestion: indexQuestion + 1 }, () => {
-        this.shuffleAnswer(indexQuestion + 1, results);
-      });
-    } else {
-      // end game!
-    }
-  };
-
-  render() {
-    const { randomAnswer, indexQuestion, isAnswer } = this.state;
->>>>>>> fde2d08... Requisito 10
     const { results, responseCode } = this.props;
     const START_INDEX = -1;
     const ERROR_API_CODE = 3;

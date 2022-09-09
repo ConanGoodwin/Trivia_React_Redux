@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-<<<<<<< HEAD
 import { fetchToken, newLogin, resetScore } from '../redux/actions';
 import { saveToken } from '../services/saveToken';
 import { addToLocalStorage, getFromLocalStorage } from '../services/localStorage';
 import store from '../redux/store';
-=======
-import { newLogin } from '../redux/actions';
->>>>>>> 1158917... l => L
 
 class Login extends Component {
   constructor() {
@@ -18,7 +14,6 @@ class Login extends Component {
       name: '',
       email: '',
       isDisabled: true,
-<<<<<<< HEAD
       token: '',
     };
   }
@@ -32,17 +27,10 @@ class Login extends Component {
     const nameInput = document.getElementById('nameIcon');
     const fullClass = 'fas fa-check';
     const failClass = 'fa-regular fa-circle-xmark';
-=======
-    };
-  }
-
-  validateBtnPlay = () => {
->>>>>>> 1158917... l => L
     const { name, email } = this.state;
     const nameRegex = /^[A-Za-z0-9^ ]{3}/;
     const emailRegex = /^[^@^ ]+@[^@^ ]+\.[a-z]{2,3}(\.[a-z]{2})?$/;
 
-<<<<<<< HEAD
     if (emailRegex.test(email)) {
       emailInput.className = fullClass;
     } else { emailInput.className = failClass; }
@@ -51,8 +39,6 @@ class Login extends Component {
       nameInput.className = fullClass;
     } else { nameInput.className = failClass; }
 
-=======
->>>>>>> 1158917... l => L
     this.setState({
       isDisabled: !emailRegex.test(email) || !nameRegex.test(name),
     });
@@ -64,16 +50,11 @@ class Login extends Component {
     });
   };
 
-<<<<<<< HEAD
   handleClick = async (event) => {
-=======
-  handleClick = (event) => {
->>>>>>> 1158917... l => L
     const { name, email } = this.state;
     const { dispatch, history } = this.props;
     event.preventDefault();
 
-<<<<<<< HEAD
     await dispatch(fetchToken());
     dispatch(newLogin({ name, email }));
     const { tokenObj } = this.props;
@@ -83,10 +64,6 @@ class Login extends Component {
     });
 
     store.dispatch(resetScore(0));
-=======
-    dispatch(newLogin({ name, email }));
-
->>>>>>> 1158917... l => L
     history.push('/game');
   };
 
@@ -99,7 +76,6 @@ class Login extends Component {
     const { name, email, isDisabled } = this.state;
 
     return (
-<<<<<<< HEAD
       <form onSubmit={ this.handleClick } className="loginForm">
         <div className="field">
           <p className="control has-icons-left has-icons-right">
@@ -168,47 +144,6 @@ class Login extends Component {
           </button>
         </div>
       </form>
-=======
-      <div>
-
-        <form onSubmit={ this.handleClick }>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={ name }
-            placeholder="nome"
-            data-testid="input-player-name"
-            onChange={ this.handleChange }
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={ email }
-            placeholder="email"
-            data-testid="input-gravatar-email"
-            onChange={ this.handleChange }
-          />
-          <input
-            type="submit"
-            value="Play"
-            disabled={ isDisabled }
-            data-testid="btn-play"
-          />
-        </form>
-
-        <div>
-          <button
-            data-testid="btn-settings"
-            type="button"
-            onClick={ this.handleClickSettings }
-          >
-            Settings
-          </button>
-        </div>
-      </div>
->>>>>>> 1158917... l => L
     );
   }
 }
@@ -218,7 +153,6 @@ Login.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
-<<<<<<< HEAD
   tokenObj: PropTypes.shape({
     token: PropTypes.string.isRequired,
   }).isRequired,
@@ -227,12 +161,6 @@ Login.propTypes = {
 const mapStateToProps = ({ user, token }) => ({
   ...user,
   ...token,
-=======
-};
-
-const mapStateToProps = ({ user }) => ({
-  ...user,
->>>>>>> 1158917... l => L
 });
 
 export default connect(mapStateToProps)(Login);
