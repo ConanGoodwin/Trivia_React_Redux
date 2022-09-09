@@ -191,11 +191,15 @@ class Game extends Component {
     let indexWrongAnswer = START_INDEX;
     return (
       <main>
+<<<<<<< HEAD
         <Header />
         {!isAnswer && <Timer
           handleClickAnswer={ this.handleClickAnswer }
           setTime={ this.setTime }
         />}
+=======
+        {(indexQuestion === 0) && (<p>new game</p>)}
+>>>>>>> b2ff96d... adicionado detalhe no paragrafo new game
         {
           (responseCode === ERROR_API_CODE) && (delToken())
         }
