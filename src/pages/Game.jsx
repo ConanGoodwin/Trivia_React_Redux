@@ -39,6 +39,12 @@ class Game extends Component {
   async componentDidMount() {
     this.newGame();
   }
+<<<<<<< HEAD
+=======
+
+  newGame = async () => {
+    const { dispatch, token } = this.props;
+>>>>>>> 1750ce6... refattorado para add função newGame para reuzo posterior
 
   newGame = async () => {
     const { dispatch, token } = this.props;
@@ -116,10 +122,10 @@ class Game extends Component {
 =======
 
       if (responseCode === 0) {
-        this.shuffleAnswer(indexQuestion, results);
+        this.shuffleAnswer(0, results);
       }
     });
-  }
+  };
 
   buildOrderAnswer = (index, array) => {
     if (array.length === 0) return [];
