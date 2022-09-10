@@ -114,16 +114,32 @@ class Game extends Component {
 =======
   handleClickAnswer = ({ target: { name } }) => {
     this.setState({ isAnswer: true }, () => {
+      const { score } = this.state;
+      const { dispatch } = this.props;
       const { randomAnswer } = this.state;
       const filterRadomAnswer = randomAnswer
         .filter(({ isCorrect }) => isCorrect === true);
+
       if (name === filterRadomAnswer[0].answer) {
+        dispatch(userScore(score));
         this.setState((prevState) => ({
           score: prevState.score + 1,
         }));
 >>>>>>> e214ae3... Requisito 13
       }
     });
+
+    // const { randomAnswer } = this.state;
+    // const filterRadomAnswer = randomAnswer
+    //   .filter(({ isCorrect }) => isCorrect === true);
+
+    // if (name === filterRadomAnswer[0].answer) {
+    //   this.setState((prevState) => ({
+    //     score: prevState.score + 1,
+    //   }), () => {
+    //     this.setState({ isAnswer: true });
+    //   });
+    // }
   };
 
   setTime = (newTime) => this.setState({ time: newTime });
@@ -131,10 +147,14 @@ class Game extends Component {
   handleClickNext = () => {
     const { indexQuestion } = this.state;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { results, history } = this.props;
 =======
     const { results, dispatch, history } = this.props;
 >>>>>>> e214ae3... Requisito 13
+=======
+    const { results, history } = this.props;
+>>>>>>> 9db508b... dispatch deslocado
     const MAX_QUESTIONS = 4;
     if (indexQuestion < MAX_QUESTIONS) {
 <<<<<<< HEAD
@@ -146,6 +166,7 @@ class Game extends Component {
         indexResp: -1 }, () => {
 =======
       this.setState({ indexQuestion: indexQuestion + 1, isAnswer: false }, () => {
+<<<<<<< HEAD
 >>>>>>> 36b040f... concertando o isAnswer para o next
 =======
       this.setState({ indexQuestion: indexQuestion + 1 }, () => {
@@ -155,10 +176,14 @@ class Game extends Component {
         const { score } = this.state;
         dispatch(userScore(score));
 >>>>>>> e214ae3... Requisito 13
+=======
+>>>>>>> 9db508b... dispatch deslocado
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
-      history.push('/feedback');
+      this.setState({ isAnswer: false }, () => {
+        history.push('/feedback');
+      });
     }
   };
 
