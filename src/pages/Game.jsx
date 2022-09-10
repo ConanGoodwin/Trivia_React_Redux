@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
 import { delToken } from '../services/saveToken';
+<<<<<<< HEAD
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 <<<<<<< HEAD
@@ -15,6 +16,8 @@ const CORRECT_BTN = 'correct';
 const WRONG_BTN = 'incorrect';
 =======
 >>>>>>> e07b5e5... isAnswer moldando as coisas na tela
+=======
+>>>>>>> 0bb80a3... teste2
 
 class Game extends Component {
   constructor() {
@@ -104,6 +107,7 @@ class Game extends Component {
     const MAX_QUESTIONS = 4;
     if (indexQuestion < MAX_QUESTIONS) {
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.setState({ indexQuestion: indexQuestion + 1,
         isAnswer: false,
         wrongClass: NORMAL_BTN,
@@ -112,6 +116,9 @@ class Game extends Component {
 =======
       this.setState({ indexQuestion: indexQuestion + 1, isAnswer: false }, () => {
 >>>>>>> 36b040f... concertando o isAnswer para o next
+=======
+      this.setState({ indexQuestion: indexQuestion + 1 }, () => {
+>>>>>>> 0bb80a3... teste2
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
@@ -136,6 +143,7 @@ class Game extends Component {
       <main>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Header />
         {!isAnswer && <Timer
           handleClickAnswer={ this.handleClickAnswer }
@@ -151,6 +159,8 @@ class Game extends Component {
           handleClickAnswer={ this.handleClickAnswer }
         />}
 >>>>>>> e07b5e5... isAnswer moldando as coisas na tela
+=======
+>>>>>>> 0bb80a3... teste2
         {(indexQuestion === 0) && (<p>new game</p>)}
 >>>>>>> b2ff96d... adicionado detalhe no paragrafo new game
         {
@@ -196,7 +206,6 @@ class Game extends Component {
                               type="button"
                               data-testid="correct-answer"
                               onClick={ this.handleClickAnswer }
-                              disabled={ isAnswer }
                             >
                               {item.answer}
                             </button>
@@ -219,7 +228,6 @@ class Game extends Component {
                               type="button"
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
                               onClick={ this.handleClickAnswer }
-                              disabled={ isAnswer }
                             >
                               {item.answer}
                             </button>
@@ -265,13 +273,14 @@ Game.propTypes = {
   dispatch: PropTypes.func.isRequired,
   token: PropTypes.string.isRequired,
   responseCode: PropTypes.number.isRequired,
-  results: PropTypes.arrayOf(PropTypes.shape({
+  results: PropTypes.shape({
     category: PropTypes.string,
     correct_answer: PropTypes.string,
     difficulty: PropTypes.string,
     question: PropTypes.string,
     type: PropTypes.string,
     incorrect_answers: PropTypes.arrayOf(PropTypes.string),
+<<<<<<< HEAD
   })).isRequired,
 <<<<<<< HEAD
   history: PropTypes.shape({
@@ -279,6 +288,10 @@ Game.propTypes = {
   }).isRequired,
 =======
 >>>>>>> f8a3d01... corrige erro PropTypes results
+=======
+
+  }).isRequired,
+>>>>>>> 0bb80a3... teste2
 };
 
 const mapStateToProps = ({ token: { tokenObj }, questions }) => {
