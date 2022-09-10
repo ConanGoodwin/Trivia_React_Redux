@@ -134,8 +134,11 @@ class Login extends Component {
           <button
             type="button"
             data-testid="btn-settings"
+<<<<<<< HEAD
             className="button is-ghost has-tooltip-arrow has-tooltip-right"
             data-tooltip="Configurações do jogo"
+=======
+>>>>>>> e924036... Requisitos 16 e 18
             onClick={ this.handleClickSettings }
           >
             <span className="icon is-small">

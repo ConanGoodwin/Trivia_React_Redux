@@ -12,7 +12,11 @@ import Settings from './pages/settings';
 >>>>>>> 1158917... l => L
 =======
 import FeedBack from './pages/FeedBack';
+<<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
+=======
+import Ranking from './pages/Ranking';
+>>>>>>> e924036... Requisitos 16 e 18
 
 export default function App() {
   return (
@@ -27,7 +31,11 @@ export default function App() {
 =======
           <Route exact path="/settings" component={ Settings } />
           <Route exact path="/feedback" component={ FeedBack } />
+<<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
+=======
+          <Route exact path="/ranking" component={ Ranking } />
+>>>>>>> e924036... Requisitos 16 e 18
         </Switch>
       </header>
     </div>
