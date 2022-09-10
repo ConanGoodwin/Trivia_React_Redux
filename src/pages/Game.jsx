@@ -43,6 +43,7 @@ class Game extends Component {
       ],
       isAnswer: false,
 <<<<<<< HEAD
+<<<<<<< HEAD
       score: 1,
       time: 30,
       wrongClass: NORMAL_BTN,
@@ -51,6 +52,9 @@ class Game extends Component {
 =======
       score: 0,
 >>>>>>> e214ae3... Requisito 13
+=======
+      score: 1,
+>>>>>>> 5fef7a0... retirado testes
     };
   }
 
@@ -121,25 +125,19 @@ class Game extends Component {
         .filter(({ isCorrect }) => isCorrect === true);
 
       if (name === filterRadomAnswer[0].answer) {
-        dispatch(userScore(score));
         this.setState((prevState) => ({
           score: prevState.score + 1,
+<<<<<<< HEAD
         }));
 >>>>>>> e214ae3... Requisito 13
+=======
+        }), async () => {
+          console.log(score);
+          await dispatch(userScore(score));
+        });
+>>>>>>> 5fef7a0... retirado testes
       }
     });
-
-    // const { randomAnswer } = this.state;
-    // const filterRadomAnswer = randomAnswer
-    //   .filter(({ isCorrect }) => isCorrect === true);
-
-    // if (name === filterRadomAnswer[0].answer) {
-    //   this.setState((prevState) => ({
-    //     score: prevState.score + 1,
-    //   }), () => {
-    //     this.setState({ isAnswer: true });
-    //   });
-    // }
   };
 
   setTime = (newTime) => this.setState({ time: newTime });
@@ -181,9 +179,7 @@ class Game extends Component {
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
-      this.setState({ isAnswer: false }, () => {
-        history.push('/feedback');
-      });
+      history.push('/feedback');
     }
   };
 
