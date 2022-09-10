@@ -132,7 +132,6 @@ class Game extends Component {
 >>>>>>> e214ae3... Requisito 13
 =======
         }), async () => {
-          console.log(score);
           await dispatch(userScore(score));
         });
 >>>>>>> 5fef7a0... retirado testes
