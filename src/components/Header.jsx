@@ -7,6 +7,7 @@ import './style/header.css';
 class Header extends React.Component {
   render() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { name, email, score } = this.props;
 
     return (
@@ -31,6 +32,9 @@ class Header extends React.Component {
         </p>
 =======
     const { name, email, totalHits } = this.props;
+=======
+    const { name, email, totalScore } = this.props;
+>>>>>>> 040749c... pontos no header
 
     return (
       <header>
@@ -40,8 +44,12 @@ class Header extends React.Component {
           data-testid="header-profile-picture"
         />
         <p data-testid="header-player-name">{name}</p>
+<<<<<<< HEAD
         <p data-testid="header-score">{totalHits}</p>
 >>>>>>> e214ae3... Requisito 13
+=======
+        <p data-testid="header-score">{totalScore}</p>
+>>>>>>> 040749c... pontos no header
 
       </header>
     );
@@ -55,17 +63,25 @@ const mapStateToProps = (state) => ({
   ...state.player,
 =======
   ...state.score,
+<<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
+=======
+  totalScore: state.player.score,
+>>>>>>> 040749c... pontos no header
 });
 
 Header.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 <<<<<<< HEAD
+<<<<<<< HEAD
   score: PropTypes.number.isRequired,
 =======
   totalHits: PropTypes.number.isRequired,
 >>>>>>> e214ae3... Requisito 13
+=======
+  totalScore: PropTypes.number.isRequired,
+>>>>>>> 040749c... pontos no header
 };
 
 export default connect(mapStateToProps)(Header);
