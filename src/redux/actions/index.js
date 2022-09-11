@@ -11,7 +11,11 @@ export const RETURN_TO_THE_DEFAULT_STATE = 'RESTART_TO_THE_DEFAULT_STATE';
 export const RESET_SCORE = 'RESET_SCORE';
 =======
 export const USER_SCORE = 'USER_SCORE';
+<<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
+=======
+export const ADD_PLAYER_SCORE = 'ADD_PLAYER_SCORE';
+>>>>>>> 31eae55... reducer req9 parte
 
 export const newLogin = (payLoad) => ({
   type: NEW_LOGIN,
@@ -68,4 +72,13 @@ export const userScore = (payLoad) => ({
   type: USER_SCORE,
   payLoad,
 });
+<<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
+=======
+
+export const addPlayerScore = (time, dificulty) => ({
+  type: ADD_PLAYER_SCORE,
+  time,
+  dificulty,
+});
+>>>>>>> 31eae55... reducer req9 parte
