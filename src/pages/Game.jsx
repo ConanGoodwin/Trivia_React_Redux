@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
 =======
 import { fetchQuestion, userScore } from '../redux/actions';
 >>>>>>> e214ae3... Requisito 13
+=======
+import { fetchQuestion, userScore, addPlayerScore } from '../redux/actions';
+>>>>>>> 0ce4291... esquema do setTime
 import { delToken } from '../services/saveToken';
 <<<<<<< HEAD
 import Header from '../components/Header';
@@ -54,7 +58,11 @@ class Game extends Component {
 >>>>>>> e214ae3... Requisito 13
 =======
       score: 1,
+<<<<<<< HEAD
 >>>>>>> 5fef7a0... retirado testes
+=======
+      time: 0,
+>>>>>>> 0ce4291... esquema do setTime
     };
   }
 
@@ -98,6 +106,7 @@ class Game extends Component {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here', i) => {
     this.setState({
       isAnswer: true,
@@ -117,10 +126,12 @@ class Game extends Component {
         });
 =======
   handleClickAnswer = ({ target: { name } }) => {
+=======
+  handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here') => {
+>>>>>>> 0ce4291... esquema do setTime
     this.setState({ isAnswer: true }, () => {
-      const { score } = this.state;
       const { dispatch } = this.props;
-      const { randomAnswer } = this.state;
+      const { randomAnswer, score } = this.state;
       const filterRadomAnswer = randomAnswer
         .filter(({ isCorrect }) => isCorrect === true);
 
@@ -132,7 +143,9 @@ class Game extends Component {
 >>>>>>> e214ae3... Requisito 13
 =======
         }), async () => {
+          const { time } = this.state;
           await dispatch(userScore(score));
+          await dispatch(addPlayerScore(time, difficulty));
         });
 >>>>>>> 5fef7a0... retirado testes
       }
@@ -262,7 +275,15 @@ class Game extends Component {
                               type="button"
                               data-testid="correct-answer"
                               name={ item.answer }
+<<<<<<< HEAD
                               onClick={ this.handleClickAnswer }
+=======
+                              onClick={ (e) => {
+                                const { difficulty } = results[indexQuestion];
+                                this.handleClickAnswer(e, difficulty);
+                              } }
+                              disabled={ isAnswer }
+>>>>>>> 0ce4291... esquema do setTime
                             >
                               {item.answer}
                             </button>
