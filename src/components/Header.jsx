@@ -8,6 +8,7 @@ class Header extends React.Component {
   render() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const { name, email, score } = this.props;
 
     return (
@@ -35,6 +36,9 @@ class Header extends React.Component {
 =======
     const { name, email, totalScore } = this.props;
 >>>>>>> 040749c... pontos no header
+=======
+    const { name, email, score } = this.props;
+>>>>>>> 5a67e08... Requisitos 12,14,15
 
     return (
       <header>
@@ -45,11 +49,15 @@ class Header extends React.Component {
         />
         <p data-testid="header-player-name">{name}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p data-testid="header-score">{totalHits}</p>
 >>>>>>> e214ae3... Requisito 13
 =======
         <p data-testid="header-score">{totalScore}</p>
 >>>>>>> 040749c... pontos no header
+=======
+        <p data-testid="header-score">{score}</p>
+>>>>>>> 5a67e08... Requisitos 12,14,15
 
       </header>
     );
@@ -60,6 +68,7 @@ const mapStateToProps = (state) => ({
   name: state.user.name,
   email: state.user.email,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ...state.player,
 =======
   ...state.score,
@@ -68,11 +77,15 @@ const mapStateToProps = (state) => ({
 =======
   totalScore: state.player.score,
 >>>>>>> 040749c... pontos no header
+=======
+  ...state.player,
+>>>>>>> 5a67e08... Requisitos 12,14,15
 });
 
 Header.propTypes = {
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   score: PropTypes.number.isRequired,
@@ -82,6 +95,9 @@ Header.propTypes = {
 =======
   totalScore: PropTypes.number.isRequired,
 >>>>>>> 040749c... pontos no header
+=======
+  score: PropTypes.number.isRequired,
+>>>>>>> 5a67e08... Requisitos 12,14,15
 };
 
 export default connect(mapStateToProps)(Header);

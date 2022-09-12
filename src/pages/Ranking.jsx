@@ -26,14 +26,19 @@ class Ranking extends Component {
 =======
 =======
 import { connect } from 'react-redux';
+<<<<<<< HEAD
 import { userScore } from '../redux/actions';
 >>>>>>> 5e4c69a... add dispatch zerando o placar
+=======
+import { addPlayerScore } from '../redux/actions';
+>>>>>>> 5a67e08... Requisitos 12,14,15
 
+const INITIAL_TIME = 30;
 class Ranking extends Component {
   handleClickGoHome = () => {
     const { history, dispatch } = this.props;
 
-    dispatch(userScore(0));
+    dispatch(addPlayerScore(INITIAL_TIME, 0, 0));
     history.push('/');
   };
 

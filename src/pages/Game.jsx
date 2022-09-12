@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { fetchQuestion, addPlayerScore } from '../redux/actions';
 =======
 import { fetchQuestion, userScore } from '../redux/actions';
@@ -11,6 +12,9 @@ import { fetchQuestion, userScore } from '../redux/actions';
 =======
 import { fetchQuestion, userScore, addPlayerScore } from '../redux/actions';
 >>>>>>> 0ce4291... esquema do setTime
+=======
+import { fetchQuestion, addPlayerScore } from '../redux/actions';
+>>>>>>> 5a67e08... Requisitos 12,14,15
 import { delToken } from '../services/saveToken';
 <<<<<<< HEAD
 import Header from '../components/Header';
@@ -144,8 +148,8 @@ class Game extends Component {
 =======
         }), async () => {
           const { time } = this.state;
-          await dispatch(userScore(score));
-          await dispatch(addPlayerScore(time, difficulty));
+          // await dispatch(userScore(score));
+          await dispatch(addPlayerScore(time, difficulty, score));
         });
 >>>>>>> 5fef7a0... retirado testes
       }

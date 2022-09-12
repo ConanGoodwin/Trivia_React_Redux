@@ -6,6 +6,7 @@ export const REQUEST_QUESTION = 'REQUEST_QUESTION';
 export const CURRENT_QUESTION = 'CURRENT_QUESTION';
 export const FAILED_QUESTION = 'FAILED_QUESTION';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const ADD_PLAYER_SCORE = 'ADD_PLAYER_SCORE';
 export const RETURN_TO_THE_DEFAULT_STATE = 'RESTART_TO_THE_DEFAULT_STATE';
 export const RESET_SCORE = 'RESET_SCORE';
@@ -14,6 +15,8 @@ export const USER_SCORE = 'USER_SCORE';
 <<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
 =======
+=======
+>>>>>>> 5a67e08... Requisitos 12,14,15
 export const ADD_PLAYER_SCORE = 'ADD_PLAYER_SCORE';
 >>>>>>> 31eae55... reducer req9 parte
 
@@ -58,6 +61,7 @@ export const fetchQuestion = (token) => async (dispatch) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const addPlayerScore = (time, dificulty, assertions) => ({
   type: ADD_PLAYER_SCORE,
   time,
@@ -77,8 +81,12 @@ export const userScore = (payLoad) => ({
 =======
 
 export const addPlayerScore = (time, dificulty) => ({
+=======
+export const addPlayerScore = (time, dificulty, assertions) => ({
+>>>>>>> 5a67e08... Requisitos 12,14,15
   type: ADD_PLAYER_SCORE,
   time,
   dificulty,
+  assertions,
 });
 >>>>>>> 31eae55... reducer req9 parte
