@@ -5,6 +5,7 @@ import mockedTokenResponse from './helpers/mockedTokenResponse';
 import {questionsResponse} from './helpers/mockedQuestionResponse'
 import renderWithRouterAndRedux from './helpers/renderWithRouterAndRedux'
 
+<<<<<<< HEAD
 const [validEmail, Name] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
 const urlToTakeToken = "https://opentdb.com/api_token.php?command=request"
 const sleep = ms => new Promise(r => setTimeout(r, ms)); // by https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
@@ -18,6 +19,11 @@ const doTheLogin = () =>{
   userEvent.type(nameInput, Name);
   userEvent.click(playBtn);
 };
+=======
+const [validEmail, validName] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
+
+const sleep = ms => new Promise(r => setTimeout(r, ms)); // by https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+>>>>>>> 3fd24ab... testes semi prontos
 
 const repeatFuncNTimes = async (func,times) => {
  for(let i = 0; i < times; i++) {
@@ -31,8 +37,14 @@ const loseQuestion = async () => {
 };
 
 const gainQuestion = async () => {
+<<<<<<< HEAD
   await sleep(100);
   userEvent.click(screen.getByTestId('correct-answer'));
+=======
+  await sleep(200);
+  userEvent.click(screen.getByTestId('correct-answer'));
+  await sleep(200);
+>>>>>>> 3fd24ab... testes semi prontos
   userEvent.click(screen.getByTestId('btn-next'));
 };
 
@@ -42,6 +54,7 @@ const generateScoreGame = async (gains) =>{
   await repeatFuncNTimes(loseQuestion,loses);
 };
 
+<<<<<<< HEAD
 describe('feedbacks page tests part1', ()=>{
   beforeEach(()=>{
     global.fetch = jest.fn((url) => {
@@ -52,6 +65,32 @@ describe('feedbacks page tests part1', ()=>{
 
     renderWithRouterAndRedux(<App />);
     doTheLogin();
+=======
+describe('feedbacks page tests', ()=>{
+  beforeEach(()=>{
+    global.fetch = jest.fn().mockReturnValue({
+      json: jest.fn().mockReturnValue(questionsResponse), 
+    });
+
+    renderWithRouterAndRedux(<App />, {
+      initialEntries: ['/game'],
+      initialState: {
+          user: {
+            name: validName,
+            email: validEmail,
+          },
+          token: {
+            isFetching: false,
+            tokenObj: {
+              response_code: 0,
+              response_message: 'Token Generated Successfully!',
+              token: '84e0fce4b4d2966a83c6b52cad893076c434fd29d754a1c4b7ec3894c1c6d313'
+            },
+            error: ''
+          },
+      }
+    });
+>>>>>>> 3fd24ab... testes semi prontos
   });
 
   it('verify if the feedback message is correct (lose case)', async () => {
@@ -60,11 +99,16 @@ describe('feedbacks page tests part1', ()=>{
   });
 
   it('verify if the feedback message is correct (winer case)', async () => {
+<<<<<<< HEAD
     await generateScoreGame(3);
+=======
+    await generateScoreGame(4);
+>>>>>>> 3fd24ab... testes semi prontos
     expect(screen.getByTestId('feedback-text').textContent).toEqual('Well Done!')
   });
 
   it('verify if the user feedback data is in the document', async () => {
+<<<<<<< HEAD
     await generateScoreGame(2);
     expect(screen.getByTestId('header-player-name').textContent).toBe(Name);
     expect(screen.getByTestId('feedback-total-score').textContent).toBe('140');
@@ -106,5 +150,11 @@ describe('feedback pages test part2',()=>{
     expect(store.getState().player).toEqual({score: 0 , assertions: 0});
 
     // aprender a trocar o mock de acordo com a chamada pra fzr a proxima parte
+=======
+    await generateScoreGame(5);
+    expect(screen.getByTestId('header-player-name').textContent).toBe(validName);
+    expect(screen.getByTestId('feedback-total-score').textContent).toBe('350');
+    expect(screen.getByTestId('feedback-total-question').textContent).toBe('5');
+>>>>>>> 3fd24ab... testes semi prontos
   });
 });
