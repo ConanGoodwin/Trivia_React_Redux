@@ -91,7 +91,7 @@ export default connect()(Timer);
   render() {
     const { timerCount } = this.state;
     if (timerCount === 0) { this.timeIsEnd(); }
-    return (<h1>{timerCount}</h1>);
+    return (<h1 data-testid="timer">{timerCount}</h1>);
   }
 }
 
