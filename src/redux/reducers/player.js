@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ADD_PLAYER_SCORE, RETURN_TO_THE_DEFAULT_STATE, RESET_SCORE } from '../actions';
 =======
 import { ADD_PLAYER_SCORE } from '../actions';
 >>>>>>> 31eae55... reducer req9 parte
+=======
+import { ADD_PLAYER_SCORE, RETURN_TO_THE_DEFAULT_STATE } from '../actions';
+>>>>>>> 697dc67... correção do restart
 
 const dez = 10;
 
@@ -56,7 +60,12 @@ const player = (state = INITIAL_STATE, action) => {
       ...state,
       score: newScore,
       assertions: action.assertions };
+<<<<<<< HEAD
 >>>>>>> 5a67e08... Requisitos 12,14,15
+=======
+  case RETURN_TO_THE_DEFAULT_STATE:
+    return INITIAL_STATE;
+>>>>>>> 697dc67... correção do restart
   default:
     return state;
   }
