@@ -54,6 +54,7 @@ class Game extends Component {
 <<<<<<< HEAD
       score: 1,
       time: 30,
+<<<<<<< HEAD
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
       indexResp: -1,
@@ -67,6 +68,8 @@ class Game extends Component {
 =======
       time: 0,
 >>>>>>> 0ce4291... esquema do setTime
+=======
+>>>>>>> 7f4f3dc... ajustes no teste assincrono
     };
   }
 

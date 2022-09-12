@@ -26,6 +26,7 @@ const player = (state = INITIAL_STATE, action) => {
   const { score } = state;
   const { time, dificulty } = action;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const newScore = score + dez + (time * convertedDificult(dificulty));
 
   switch (action.type) {
@@ -40,6 +41,11 @@ const player = (state = INITIAL_STATE, action) => {
     ...state, score: action.newScore,
   };
 =======
+=======
+  const newScore = score + dez + (time * convertedDificult(dificulty));
+  console.log(time);
+
+>>>>>>> 7f4f3dc... ajustes no teste assincrono
   switch (action.type) {
   case ADD_PLAYER_SCORE:
 <<<<<<< HEAD
@@ -48,7 +54,7 @@ const player = (state = INITIAL_STATE, action) => {
 =======
     return {
       ...state,
-      score: score + dez + (time * convertedDificult(dificulty)),
+      score: newScore,
       assertions: action.assertions };
 >>>>>>> 5a67e08... Requisitos 12,14,15
   default:

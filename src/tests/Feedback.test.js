@@ -38,6 +38,7 @@ const loseQuestion = async () => {
 
 const gainQuestion = async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   await sleep(100);
   userEvent.click(screen.getByTestId('correct-answer'));
 =======
@@ -45,6 +46,10 @@ const gainQuestion = async () => {
   userEvent.click(screen.getByTestId('correct-answer'));
   await sleep(200);
 >>>>>>> 3fd24ab... testes semi prontos
+=======
+  await sleep(1100);
+  userEvent.click(screen.getByTestId('correct-answer'));
+>>>>>>> 7f4f3dc... ajustes no teste assincrono
   userEvent.click(screen.getByTestId('btn-next'));
 };
 
@@ -109,6 +114,7 @@ describe('feedbacks page tests', ()=>{
 
   it('verify if the user feedback data is in the document', async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     await generateScoreGame(2);
     expect(screen.getByTestId('header-player-name').textContent).toBe(Name);
     expect(screen.getByTestId('feedback-total-score').textContent).toBe('140');
@@ -156,5 +162,11 @@ describe('feedback pages test part2',()=>{
     expect(screen.getByTestId('feedback-total-score').textContent).toBe('350');
     expect(screen.getByTestId('feedback-total-question').textContent).toBe('5');
 >>>>>>> 3fd24ab... testes semi prontos
+=======
+    await generateScoreGame(3);
+    expect(screen.getByTestId('header-player-name').textContent).toBe(validName);
+    expect(screen.getByTestId('feedback-total-score').textContent).toBe('204');
+    expect(screen.getByTestId('feedback-total-question').textContent).toBe('3');
+>>>>>>> 7f4f3dc... ajustes no teste assincrono
   });
 });
