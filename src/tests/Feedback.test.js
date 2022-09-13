@@ -21,7 +21,7 @@ const doTheLogin = () =>{
 };
 =======
 const [validEmail, validName] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
-
+const urlToTakeToken = "https://opentdb.com/api_token.php?command=request"
 const sleep = ms => new Promise(r => setTimeout(r, ms)); // by https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 >>>>>>> 3fd24ab... testes semi prontos
 
@@ -81,9 +81,11 @@ describe('feedbacks page tests', ()=>{
 describe('feedbacks page tests part1', ()=>{
 >>>>>>> bcfd150... ultmos testes, os relacionados ao "restart game"
   beforeEach(()=>{
-    global.fetch = jest.fn().mockReturnValue({
-      json: jest.fn().mockReturnValue(questionsResponse), 
-    });
+    global.fetch = jest.fn((url) => {
+      const mResponse = (url === urlToTakeToken) ? mockedTokenResponse : questionsResponse;
+      return({
+      json: jest.fn().mockReturnValue(mResponse),
+    })});
 
     renderWithRouterAndRedux(<App />, {
       initialEntries: ['/game'],
