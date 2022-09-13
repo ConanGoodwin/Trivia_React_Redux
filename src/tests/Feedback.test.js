@@ -39,6 +39,7 @@ const loseQuestion = async () => {
 const gainQuestion = async () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   await sleep(100);
   userEvent.click(screen.getByTestId('correct-answer'));
 =======
@@ -48,6 +49,9 @@ const gainQuestion = async () => {
 >>>>>>> 3fd24ab... testes semi prontos
 =======
   await sleep(1100);
+=======
+  await sleep(100);
+>>>>>>> c8e9d08... ta rolando algum problema c o teste
   userEvent.click(screen.getByTestId('correct-answer'));
 >>>>>>> 7f4f3dc... ajustes no teste assincrono
   userEvent.click(screen.getByTestId('btn-next'));
@@ -109,14 +113,19 @@ describe('feedbacks page tests part1', ()=>{
 
   it('verify if the feedback message is correct (winer case)', async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
     await generateScoreGame(3);
 =======
     await generateScoreGame(4);
 >>>>>>> 3fd24ab... testes semi prontos
+=======
+    await generateScoreGame(3);
+>>>>>>> c8e9d08... ta rolando algum problema c o teste
     expect(screen.getByTestId('feedback-text').textContent).toEqual('Well Done!')
   });
 
   it('verify if the user feedback data is in the document', async () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     await generateScoreGame(2);
@@ -172,6 +181,12 @@ describe('feedback pages test part2',()=>{
     expect(screen.getByTestId('feedback-total-score').textContent).toBe('204');
     expect(screen.getByTestId('feedback-total-question').textContent).toBe('3');
 >>>>>>> 7f4f3dc... ajustes no teste assincrono
+=======
+    await generateScoreGame(2);
+    expect(screen.getByTestId('header-player-name').textContent).toBe(validName);
+    expect(screen.getByTestId('feedback-total-score').textContent).toBe('140');
+    expect(screen.getByTestId('feedback-total-question').textContent).toBe('2');
+>>>>>>> c8e9d08... ta rolando algum problema c o teste
   });
 
   it('verify if the ranking button works as expected', async () => {
@@ -210,7 +225,7 @@ describe('feedback pages test part2',()=>{
       }
     });
     
-    await generateScoreGame(2); // in the end it will be change
+    await generateScoreGame(1); // in the end it will be change
     userEvent.click(screen.getByTestId('btn-play-again'));
 
     const emailInput = screen.getByTestId('input-gravatar-email');
