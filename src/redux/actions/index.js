@@ -8,6 +8,7 @@ export const FAILED_QUESTION = 'FAILED_QUESTION';
 <<<<<<< HEAD
 <<<<<<< HEAD
 export const ADD_PLAYER_SCORE = 'ADD_PLAYER_SCORE';
+<<<<<<< HEAD
 export const RETURN_TO_THE_DEFAULT_STATE = 'RESTART_TO_THE_DEFAULT_STATE';
 <<<<<<< HEAD
 export const RESET_SCORE = 'RESET_SCORE';
@@ -22,6 +23,9 @@ export const ADD_PLAYER_SCORE = 'ADD_PLAYER_SCORE';
 >>>>>>> 31eae55... reducer req9 parte
 =======
 >>>>>>> 697dc67... correção do restart
+=======
+export const RESET_SCORE = 'RESET_SCORE';
+>>>>>>> 9aba6d6... req 19
 
 export const newLogin = (payLoad) => ({
   type: NEW_LOGIN,
@@ -93,8 +97,13 @@ export const addPlayerScore = (time, dificulty, assertions) => ({
   assertions,
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 31eae55... reducer req9 parte
 =======
 
 export const returnToTheDefaultState = () => ({ type: RETURN_TO_THE_DEFAULT_STATE });
 >>>>>>> 697dc67... correção do restart
+=======
+
+export const resetScore = (newScore) => ({ type: RESET_SCORE, newScore });
+>>>>>>> 9aba6d6... req 19

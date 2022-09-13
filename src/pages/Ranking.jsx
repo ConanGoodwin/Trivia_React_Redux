@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { addPlayerScore } from '../redux/actions';
 import PlayerCard from '../components/PlayerCard';
 import { getFromLocalStorage } from '../services/localStorage';
+<<<<<<< HEAD
 import './style/ranking.css';
 
 const INITIAL_TIME = 30;
@@ -32,9 +33,15 @@ import { userScore } from '../redux/actions';
 =======
 import { addPlayerScore } from '../redux/actions';
 >>>>>>> 5a67e08... Requisitos 12,14,15
+=======
+>>>>>>> 9aba6d6... req 19
 
 const INITIAL_TIME = 30;
 class Ranking extends Component {
+  state = {
+    ranking: getFromLocalStorage('ranking'),
+  };
+
   handleClickGoHome = () => {
     const { history, dispatch } = this.props;
 
@@ -46,7 +53,11 @@ class Ranking extends Component {
 >>>>>>> e924036... Requisitos 16 e 18
 =======
   render() {
+<<<<<<< HEAD
 >>>>>>> 5e4c69a... add dispatch zerando o placar
+=======
+    const { ranking } = this.state;
+>>>>>>> 9aba6d6... req 19
     return (
       <section>
         <h1 data-testid="ranking-title">Ranking</h1>
@@ -72,7 +83,14 @@ class Ranking extends Component {
         >
           Tela Inicial
         </button>
+<<<<<<< HEAD
 >>>>>>> e924036... Requisitos 16 e 18
+=======
+        {ranking.length > 0 && ranking
+          .sort((a, b) => b.score - a.score).map((player, i) => (
+            <PlayerCard key={ i } player={ player } index={ i } />
+          ))}
+>>>>>>> 9aba6d6... req 19
       </section>
     );
   }

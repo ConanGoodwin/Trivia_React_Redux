@@ -6,6 +6,7 @@ export default class PlayerCard extends Component {
     const { player: { name, picture, score, index } } = this.props;
 
     return (
+<<<<<<< HEAD
       <div className="cabecalho playercard">
         <figure className="image is-48x48">
           <img
@@ -14,6 +15,10 @@ export default class PlayerCard extends Component {
             className="is-rounded"
           />
         </figure>
+=======
+      <div>
+        <p>{picture}</p>
+>>>>>>> 9aba6d6... req 19
         <p data-testid={ `player-name-${index}` }>{name}</p>
         <p data-testid={ `player-score-${index}` }>{score}</p>
       </div>

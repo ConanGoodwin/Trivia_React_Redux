@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+<<<<<<< HEAD
+=======
+import md5 from 'crypto-js/md5';
+>>>>>>> 9aba6d6... req 19
 import { fetchToken, newLogin, resetScore } from '../redux/actions';
 import { saveToken } from '../services/saveToken';
 import { addToLocalStorage, getFromLocalStorage } from '../services/localStorage';
@@ -63,6 +67,17 @@ class Login extends Component {
       saveToken(token);
     });
 
+<<<<<<< HEAD
+=======
+    const imgURL = `https://www.gravatar.com/avatar/${md5(email).toString()}`;
+    const player = { name, score: 0, picture: imgURL };
+    const currRanking = getFromLocalStorage('ranking');
+    if (currRanking) {
+      addToLocalStorage('ranking', [player, ...currRanking]);
+    } else {
+      addToLocalStorage('ranking', [player]);
+    }
+>>>>>>> 9aba6d6... req 19
     store.dispatch(resetScore(0));
     history.push('/game');
   };
