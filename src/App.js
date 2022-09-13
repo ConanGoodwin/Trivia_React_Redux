@@ -9,12 +9,16 @@ import Game from './pages/Game';
 import Game from './pages/game';
 import Settings from './pages/settings';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1158917... l => L
 =======
 import FeedBack from './pages/FeedBack';
 <<<<<<< HEAD
 >>>>>>> e214ae3... Requisito 13
 =======
+=======
+import FeedBack from './pages/Feedback';
+>>>>>>> 88ad2c1... o problema era uma letra maiuscula
 import Ranking from './pages/Ranking';
 >>>>>>> e924036... Requisitos 16 e 18
 
