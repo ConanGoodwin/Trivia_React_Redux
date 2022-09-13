@@ -22,6 +22,7 @@ import Header from '../components/Header';
 <<<<<<< HEAD
 import Timer from '../components/Timer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './style/Game.css';
 import BtnRespText from '../components/BtnRespText';
 
@@ -37,6 +38,9 @@ const WRONG_BTN = 'incorrect';
 >>>>>>> e214ae3... Requisito 13
 =======
 >>>>>>> 046454c... retira comentários desnecessários
+=======
+import './style/Game.css';
+>>>>>>> 43f56a2... Adiciona requisito 7
 
 class Game extends Component {
   constructor() {
@@ -55,6 +59,7 @@ class Game extends Component {
       score: 1,
       time: 30,
 <<<<<<< HEAD
+<<<<<<< HEAD
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
       indexResp: -1,
@@ -70,6 +75,10 @@ class Game extends Component {
 >>>>>>> 0ce4291... esquema do setTime
 =======
 >>>>>>> 7f4f3dc... ajustes no teste assincrono
+=======
+      wrongClass: 'initial',
+      correctClass: 'initial',
+>>>>>>> 43f56a2... Adiciona requisito 7
     };
   }
 
@@ -135,8 +144,13 @@ class Game extends Component {
   handleClickAnswer = ({ target: { name } }) => {
 =======
   handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here') => {
+<<<<<<< HEAD
 >>>>>>> 0ce4291... esquema do setTime
     this.setState({ isAnswer: true }, () => {
+=======
+    this.setState({
+      isAnswer: true, wrongClass: 'incorrect', correctClass: 'correct' }, () => {
+>>>>>>> 43f56a2... Adiciona requisito 7
       const { dispatch } = this.props;
       const { randomAnswer, score } = this.state;
       const filterRadomAnswer = randomAnswer
@@ -176,6 +190,7 @@ class Game extends Component {
     if (indexQuestion < MAX_QUESTIONS) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       this.setState({ indexQuestion: indexQuestion + 1,
         isAnswer: false,
         wrongClass: NORMAL_BTN,
@@ -195,6 +210,12 @@ class Game extends Component {
 >>>>>>> e214ae3... Requisito 13
 =======
 >>>>>>> 9db508b... dispatch deslocado
+=======
+      this.setState({ indexQuestion: indexQuestion + 1,
+        isAnswer: false,
+        wrongClass: 'initial',
+        correctClass: 'initial' }, () => {
+>>>>>>> 43f56a2... Adiciona requisito 7
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
@@ -210,7 +231,11 @@ class Game extends Component {
 
   render() {
     const { randomAnswer, indexQuestion, isAnswer,
+<<<<<<< HEAD
       wrongClass, correctClass, indexResp } = this.state;
+=======
+      wrongClass, correctClass } = this.state;
+>>>>>>> 43f56a2... Adiciona requisito 7
     const { results, responseCode } = this.props;
     const START_INDEX = -1;
     const ERROR_API_CODE = 3;
@@ -290,7 +315,11 @@ class Game extends Component {
                                 this.handleClickAnswer(e, difficulty);
                               } }
                               disabled={ isAnswer }
+<<<<<<< HEAD
 >>>>>>> 0ce4291... esquema do setTime
+=======
+                              className={ correctClass }
+>>>>>>> 43f56a2... Adiciona requisito 7
                             >
                               {item.answer}
                             </button>
@@ -314,6 +343,11 @@ class Game extends Component {
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
                               name={ item.answer }
                               onClick={ this.handleClickAnswer }
+<<<<<<< HEAD
+=======
+                              disabled={ isAnswer }
+                              className={ wrongClass }
+>>>>>>> 43f56a2... Adiciona requisito 7
                             >
                               {item.answer}
                             </button>

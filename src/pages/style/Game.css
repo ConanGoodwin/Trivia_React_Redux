@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: answer;
   src: url('../../fonts/SunnyspellsRegular-MV9ze.otf');
@@ -87,3 +88,16 @@
     opacity: 0;
   }
 }
+=======
+.correct {
+    border: 3px solid rgb(6, 240,15);
+}
+
+.incorrect {
+    border: 3px solid red;
+}
+
+.inicial {
+    border: 3px solid black;
+}
+>>>>>>> 43f56a2... Adiciona requisito 7
