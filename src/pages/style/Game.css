@@ -90,14 +90,19 @@
 }
 =======
 .correct {
-    border: 3px solid rgb(6, 240,15);
+  border: 3px solid rgb(6, 240, 15);
 }
 
 .incorrect {
-    border: 3px solid red;
+  border: 3px solid red;
 }
 
 .inicial {
+<<<<<<< HEAD
     border: 3px solid black;
 }
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+  border: 3px solid black;
+}
+>>>>>>> fabba84... Corrige lint
