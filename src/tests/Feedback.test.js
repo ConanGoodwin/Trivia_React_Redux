@@ -6,6 +6,7 @@ import {questionsResponse} from './helpers/mockedQuestionResponse'
 import renderWithRouterAndRedux from './helpers/renderWithRouterAndRedux'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const [validEmail, Name] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
 const urlToTakeToken = "https://opentdb.com/api_token.php?command=request"
 const sleep = ms => new Promise(r => setTimeout(r, ms)); // by https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
@@ -21,6 +22,9 @@ const doTheLogin = () =>{
 };
 =======
 const [validEmail, validName] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
+=======
+const [validEmail, Name] = ['joaozinhoDoMinecraft@gmail.com', 'adimin4002'];
+>>>>>>> 55400de... pro bot rodar
 const urlToTakeToken = "https://opentdb.com/api_token.php?command=request"
 const sleep = ms => new Promise(r => setTimeout(r, ms)); // by https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
 >>>>>>> 3fd24ab... testes semi prontos
@@ -31,7 +35,7 @@ const doTheLogin = () =>{
   const playBtn = screen.getByTestId('btn-play');
 
   userEvent.type(emailInput, validEmail);
-  userEvent.type(nameInput, validName);
+  userEvent.type(nameInput, Name);
   userEvent.click(playBtn);
 };
 
@@ -200,7 +204,7 @@ describe('feedback pages test part2',()=>{
 >>>>>>> 7f4f3dc... ajustes no teste assincrono
 =======
     await generateScoreGame(2);
-    expect(screen.getByTestId('header-player-name').textContent).toBe(validName);
+    expect(screen.getByTestId('header-player-name').textContent).toBe(Name);
     expect(screen.getByTestId('feedback-total-score').textContent).toBe('140');
     expect(screen.getByTestId('feedback-total-question').textContent).toBe('2');
 >>>>>>> c8e9d08... ta rolando algum problema c o teste
