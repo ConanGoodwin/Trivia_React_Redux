@@ -333,7 +333,7 @@ class Game extends Component {
                               className={ correctClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              {item.answer}
+                              {this.decodeEntity(item.answer)}
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
@@ -361,7 +361,7 @@ class Game extends Component {
                               className={ wrongClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              {item.answer}
+                              {this.decodeEntity(item.answer)}
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
