@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import md5 from 'crypto-js/md5';
 >>>>>>> 9aba6d6... req 19
+=======
+>>>>>>> 9517d64... refatorado para mexer no local storage quando computar os pontos, para evitar usuario fantasma no localstorage se sair no meio das perguntas"
 import { fetchToken, newLogin, resetScore } from '../redux/actions';
 import { saveToken } from '../services/saveToken';
 import { addToLocalStorage, getFromLocalStorage } from '../services/localStorage';
@@ -68,6 +71,7 @@ class Login extends Component {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const imgURL = `https://www.gravatar.com/avatar/${md5(email).toString()}`;
     const player = { name, score: 0, picture: imgURL };
@@ -78,6 +82,8 @@ class Login extends Component {
       addToLocalStorage('ranking', [player]);
     }
 >>>>>>> 9aba6d6... req 19
+=======
+>>>>>>> 9517d64... refatorado para mexer no local storage quando computar os pontos, para evitar usuario fantasma no localstorage se sair no meio das perguntas"
     store.dispatch(resetScore(0));
     history.push('/game');
   };

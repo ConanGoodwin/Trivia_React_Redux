@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9517d64... refatorado para mexer no local storage quando computar os pontos, para evitar usuario fantasma no localstorage se sair no meio das perguntas"
 import md5 from 'crypto-js/md5';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
@@ -47,14 +50,16 @@ class FeedBack extends Component {
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
 =======
   componentDidMount() {
-    const { score } = this.props;
+    const { score, name, email } = this.props;
     const storage = getFromLocalStorage('ranking');
 
-    const currPlayer = storage[0];
+    const imgURL = `https://www.gravatar.com/avatar/${md5(email).toString()}`;
+    const currPlayer = { name, score, picture: imgURL };
+
     const newRanking = storage
-      .filter(({ name }) => name !== currPlayer.name);
+      .filter((item) => item.name !== currPlayer.name);
     let actualRanking = storage
-      .find(({ name }, index) => name === currPlayer.name && index !== 0);
+      .find((item, index) => item.name === currPlayer.name && index !== 0);
 
     if (!actualRanking) { actualRanking = { score: -1 }; }
     if (actualRanking.score < score) {
@@ -158,9 +163,13 @@ class FeedBack extends Component {
 const mapStateToProps = (state) => ({
   ...state.player,
 <<<<<<< HEAD
+<<<<<<< HEAD
   ...state.user,
 =======
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+  ...state.user,
+>>>>>>> 9517d64... refatorado para mexer no local storage quando computar os pontos, para evitar usuario fantasma no localstorage se sair no meio das perguntas"
 });
 
 FeedBack.propTypes = {
@@ -171,10 +180,15 @@ FeedBack.propTypes = {
   score: PropTypes.number.isRequired,
   dispatch: PropTypes.func.isRequired,
 <<<<<<< HEAD
+<<<<<<< HEAD
   name: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
 =======
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+>>>>>>> 9517d64... refatorado para mexer no local storage quando computar os pontos, para evitar usuario fantasma no localstorage se sair no meio das perguntas"
 };
 
 export default connect(mapStateToProps)(FeedBack);
