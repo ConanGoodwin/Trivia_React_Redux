@@ -21,6 +21,7 @@ class Header extends React.Component {
             data-testid="header-profile-picture"
           />
         </figure>
+<<<<<<< HEAD
         <p data-testid="header-player-name" className="user">{name}</p>
         <p className="borderScore">
           <div className="subBorder">
@@ -58,6 +59,14 @@ class Header extends React.Component {
 =======
         <p data-testid="header-score">{score}</p>
 >>>>>>> 5a67e08... Requisitos 12,14,15
+=======
+        <p data-testid="header-player-name">{name}</p>
+        <p data-testid="header-score">
+          Placar:
+          {' '}
+          {score}
+        </p>
+>>>>>>> 86b554f... consertado quotes dos textos
 
       </header>
     );

@@ -141,3 +141,10 @@ body {
 >>>>>>> fd55a0b... adicionado estilo a tela de login
 }
 
+.cabecalho {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+}
+

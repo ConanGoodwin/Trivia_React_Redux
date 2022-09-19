@@ -275,12 +275,20 @@ class Game extends Component {
           (responseCode === ERROR_API_CODE) ? (<Redirect to="/" />)
             : (
               <section>
+<<<<<<< HEAD
                 <h2 data-testid="question-category" className="category">
+=======
+                <h2 data-testid="question-category">
+>>>>>>> 86b554f... consertado quotes dos textos
                   {
                     this.decodeEntity(results[indexQuestion].category)
                   }
                 </h2>
+<<<<<<< HEAD
                 <p data-testid="question-text" className="question">
+=======
+                <p data-testid="question-text">
+>>>>>>> 86b554f... consertado quotes dos textos
                   {
                     this.decodeEntity(results[indexQuestion].question)
                   }
