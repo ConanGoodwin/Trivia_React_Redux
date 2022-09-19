@@ -122,7 +122,7 @@ class Game extends Component {
                               data-testid="correct-answer"
                               onClick={ this.handleClickAnswer }
                             >
-                              {item.answer}
+                              {this.decodeEntity(item.answer)}
                             </button>
                           )
                           : (
@@ -132,7 +132,7 @@ class Game extends Component {
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
                               onClick={ this.handleClickAnswer }
                             >
-                              {item.answer}
+                              {this.decodeEntity(item.answer)}
                             </button>
                           )
                       );
