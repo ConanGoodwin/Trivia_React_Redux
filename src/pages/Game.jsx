@@ -250,6 +250,7 @@ class Game extends Component {
           handleClickAnswer={ this.handleClickAnswer }
           setTime={ this.setTime }
         />}
+<<<<<<< HEAD
 =======
 =======
         <Header />
@@ -264,6 +265,9 @@ class Game extends Component {
 >>>>>>> 0bb80a3... teste2
         {(indexQuestion === 0) && (<p>new game</p>)}
 >>>>>>> b2ff96d... adicionado detalhe no paragrafo new game
+=======
+        {/* {(indexQuestion === 0) && (<p>new game</p>)} */}
+>>>>>>> fd55a0b... adicionado estilo a tela de login
         {
           (responseCode === ERROR_API_CODE) && (delToken())
         }

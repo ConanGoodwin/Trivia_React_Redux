@@ -51,7 +51,6 @@ const player = (state = INITIAL_STATE, action) => {
 =======
 =======
   const newScore = score + dez + (time * convertedDificult(dificulty));
-  console.log(time);
 
 >>>>>>> 7f4f3dc... ajustes no teste assincrono
   switch (action.type) {

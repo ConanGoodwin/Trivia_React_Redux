@@ -65,9 +65,24 @@ class FeedBack extends Component {
     history.push('/');
   };
 
+  handleClickGoRanking = () => {
+    const { history, score } = this.props;
+
+    history.push('/ranking');
+    const currPlayer = getFromLocalStorage('ranking')[0];
+    const newRanking = getFromLocalStorage('ranking')
+      .filter(({ name }) => name !== currPlayer.name);
+    currPlayer.score = score;
+    addToLocalStorage('ranking', [currPlayer, ...newRanking]);
+  };
+
   render() {
+<<<<<<< HEAD
     const { history, score, assertions } = this.props;
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+    const { score, assertions } = this.props;
+>>>>>>> fd55a0b... adicionado estilo a tela de login
 
     return (
       <div>
@@ -95,8 +110,12 @@ class FeedBack extends Component {
         <button
           type="button"
           data-testid="btn-ranking"
+<<<<<<< HEAD
           onClick={ () => history.push('/ranking') }
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+          onClick={ this.handleClickGoRanking }
+>>>>>>> fd55a0b... adicionado estilo a tela de login
         >
           Ranking
         </button>

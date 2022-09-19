@@ -150,10 +150,15 @@ class Login extends Component {
             type="button"
             data-testid="btn-settings"
 <<<<<<< HEAD
+<<<<<<< HEAD
             className="button is-ghost has-tooltip-arrow has-tooltip-right"
             data-tooltip="Configurações do jogo"
 =======
 >>>>>>> e924036... Requisitos 16 e 18
+=======
+            className="button is-ghost has-tooltip-arrow has-tooltip-right"
+            data-tooltip="Configurações do jogo"
+>>>>>>> fd55a0b... adicionado estilo a tela de login
             onClick={ this.handleClickSettings }
           >
             <span className="icon is-small">

@@ -56,6 +56,7 @@ body {
 }
 
 .loginForm {
+<<<<<<< HEAD
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -83,10 +84,39 @@ body {
 /* line 28, src/sass/app.sass */
 .divider:after {
   background-color: #dbdbdb;
+=======
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  justify-items: center;
+  align-items: center;
+}
+
+.settings {
+  width: 100%;
+  display: flex;
+}
+
+.divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #7a7a7a;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin: 5px 0 10px;
+}
+
+/* line 28, src/sass/app.sass */
+.divider::after, .divider::before {
+>>>>>>> fd55a0b... adicionado estilo a tela de login
   content: '_______';
   display: block;
   flex: 1;
   height: 1px;
+<<<<<<< HEAD
 }
 
 .divider:before {
@@ -106,5 +136,8 @@ body {
 
 .button {
   margin: 0 10px;
+=======
+  background-color: #dbdbdb;
+>>>>>>> fd55a0b... adicionado estilo a tela de login
 }
 
