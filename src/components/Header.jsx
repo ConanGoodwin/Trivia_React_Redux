@@ -61,10 +61,12 @@ class Header extends React.Component {
 >>>>>>> 5a67e08... Requisitos 12,14,15
 =======
         <p data-testid="header-player-name">{name}</p>
-        <p data-testid="header-score">
+        <p>
           Placar:
           {' '}
-          {score}
+          <span data-testid="header-score">
+            {score}
+          </span>
         </p>
 >>>>>>> 86b554f... consertado quotes dos textos
 
