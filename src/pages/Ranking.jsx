@@ -88,7 +88,7 @@ class Ranking extends Component {
 =======
         {ranking.length > 0 && ranking
           .sort((a, b) => b.score - a.score).map((player, i) => (
-            <PlayerCard key={ i } player={ player } index={ i } />
+            <PlayerCard key={ i } player={ player } />
           ))}
 >>>>>>> 9aba6d6... req 19
       </section>

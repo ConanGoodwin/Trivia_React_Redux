@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 
 export default class PlayerCard extends Component {
   render() {
-    const { player: { name, picture, score, index } } = this.props;
+    const { player: { name, picture, score, index }, email } = this.props;
 
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="cabecalho playercard">
+=======
+      <div className="cabecalho">
+>>>>>>> 2d82538... inserido imagem do player no ranking
         <figure className="image is-48x48">
           <img
             src={ picture }
@@ -16,6 +20,7 @@ export default class PlayerCard extends Component {
             className="is-rounded"
           />
         </figure>
+<<<<<<< HEAD
 =======
       <div>
 <<<<<<< HEAD
@@ -28,6 +33,8 @@ export default class PlayerCard extends Component {
           data-testid="header-profile-picture"
         />
 >>>>>>> fd55a0b... adicionado estilo a tela de login
+=======
+>>>>>>> 2d82538... inserido imagem do player no ranking
         <p data-testid={ `player-name-${index}` }>{name}</p>
         <p data-testid={ `player-score-${index}` }>{score}</p>
       </div>
