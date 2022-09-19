@@ -18,6 +18,7 @@ const VALUE_FEEDBACK = 3;
 
 class FeedBack extends Component {
 <<<<<<< HEAD
+<<<<<<< HEAD
   componentDidMount() {
     const { score, name, email } = this.props;
     const storage = getFromLocalStorage('ranking');
@@ -44,12 +45,34 @@ class FeedBack extends Component {
 
 =======
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+  componentDidMount() {
+    const { score } = this.props;
+    const storage = getFromLocalStorage('ranking');
+
+    const currPlayer = storage[0];
+    const newRanking = storage
+      .filter(({ name }) => name !== currPlayer.name);
+    let actualRanking = storage
+      .find(({ name }, index) => name === currPlayer.name && index !== 0);
+
+    if (!actualRanking) { actualRanking = { score: -1 }; }
+    if (actualRanking.score < score) {
+      currPlayer.score = score;
+      addToLocalStorage('ranking', [currPlayer, ...newRanking]);
+    } else {
+      addToLocalStorage('ranking', [actualRanking, ...newRanking]);
+    }
+  }
+
+>>>>>>> b9cf229... atualizando o ranking de acordo com o maior placar
   handleClickGoHome = () => {
     const { history, dispatch } = this.props;
 
     dispatch(returnToTheDefaultState());
 <<<<<<< HEAD
     // dispatch(addPlayerScore(INITIAL_TIME, 0, 0));
+<<<<<<< HEAD
     history.push('/');
   };
 
@@ -62,18 +85,15 @@ class FeedBack extends Component {
   render() {
     const { assertions } = this.props;
 =======
+=======
+>>>>>>> b9cf229... atualizando o ranking de acordo com o maior placar
     history.push('/');
   };
 
   handleClickGoRanking = () => {
-    const { history, score } = this.props;
+    const { history } = this.props;
 
     history.push('/ranking');
-    const currPlayer = getFromLocalStorage('ranking')[0];
-    const newRanking = getFromLocalStorage('ranking')
-      .filter(({ name }) => name !== currPlayer.name);
-    currPlayer.score = score;
-    addToLocalStorage('ranking', [currPlayer, ...newRanking]);
   };
 
   render() {
