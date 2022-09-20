@@ -299,11 +299,15 @@ class Game extends Component {
               <section>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h2 data-testid="question-category" className="category">
 =======
 =======
                 <Carrousel />
 >>>>>>> f517f6b... adicionado carrousel
+=======
+                {/* <Carrousel /> */}
+>>>>>>> 506cf54... corrigido registro de placar
                 <h2 data-testid="question-category">
 >>>>>>> 86b554f... consertado quotes dos textos
                   {
