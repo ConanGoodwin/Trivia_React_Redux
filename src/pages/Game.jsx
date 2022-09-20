@@ -41,9 +41,13 @@ const WRONG_BTN = 'incorrect';
 =======
 import './style/Game.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 43f56a2... Adiciona requisito 7
 =======
 import Carrousel from '../components/Carrousel';
+=======
+// import Carrousel from '../components/Carrousel';
+>>>>>>> ded67d8... retirado carrousel
 
 const NORMAL_BTN = 'button is-success is-outlined is-responsive';
 const CORRECT_BTN = 'button is-success is-responsive';
