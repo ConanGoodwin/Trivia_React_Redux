@@ -40,7 +40,15 @@ const WRONG_BTN = 'incorrect';
 >>>>>>> 046454c... retira comentários desnecessários
 =======
 import './style/Game.css';
+<<<<<<< HEAD
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+import Carrousel from '../components/Carrousel';
+
+const NORMAL_BTN = 'button is-success is-outlined is-responsive';
+const CORRECT_BTN = 'button is-success is-responsive';
+const WRONG_BTN = 'button is-danger is-responsive';
+>>>>>>> f517f6b... adicionado carrousel
 
 class Game extends Component {
   constructor() {
@@ -58,6 +66,7 @@ class Game extends Component {
 <<<<<<< HEAD
       score: 1,
       time: 30,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       wrongClass: NORMAL_BTN,
@@ -79,6 +88,10 @@ class Game extends Component {
       wrongClass: 'initial',
       correctClass: 'initial',
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+      wrongClass: NORMAL_BTN,
+      correctClass: NORMAL_BTN,
+>>>>>>> f517f6b... adicionado carrousel
     };
   }
 
@@ -149,8 +162,12 @@ class Game extends Component {
     this.setState({ isAnswer: true }, () => {
 =======
     this.setState({
+<<<<<<< HEAD
       isAnswer: true, wrongClass: 'incorrect', correctClass: 'correct' }, () => {
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+      isAnswer: true, wrongClass: WRONG_BTN, correctClass: CORRECT_BTN }, () => {
+>>>>>>> f517f6b... adicionado carrousel
       const { dispatch } = this.props;
       const { randomAnswer, score } = this.state;
       const filterRadomAnswer = randomAnswer
@@ -213,9 +230,14 @@ class Game extends Component {
 =======
       this.setState({ indexQuestion: indexQuestion + 1,
         isAnswer: false,
+<<<<<<< HEAD
         wrongClass: 'initial',
         correctClass: 'initial' }, () => {
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+        wrongClass: NORMAL_BTN,
+        correctClass: NORMAL_BTN }, () => {
+>>>>>>> f517f6b... adicionado carrousel
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
@@ -276,8 +298,12 @@ class Game extends Component {
             : (
               <section>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h2 data-testid="question-category" className="category">
 =======
+=======
+                <Carrousel />
+>>>>>>> f517f6b... adicionado carrousel
                 <h2 data-testid="question-category">
 >>>>>>> 86b554f... consertado quotes dos textos
                   {
