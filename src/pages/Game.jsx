@@ -320,18 +320,26 @@ class Game extends Component {
 >>>>>>> f517f6b... adicionado carrousel
 =======
                 {/* <Carrousel /> */}
+<<<<<<< HEAD
 >>>>>>> 506cf54... corrigido registro de placar
                 <h2 data-testid="question-category">
 >>>>>>> 86b554f... consertado quotes dos textos
+=======
+                <h2 data-testid="question-category" className="category">
+>>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
                   {
                     this.decodeEntity(results[indexQuestion].category)
                   }
                 </h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p data-testid="question-text" className="question">
 =======
                 <p data-testid="question-text">
 >>>>>>> 86b554f... consertado quotes dos textos
+=======
+                <p data-testid="question-text" className="question">
+>>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
                   {
                     this.decodeEntity(results[indexQuestion].question)
                   }

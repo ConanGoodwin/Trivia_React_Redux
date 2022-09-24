@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
 @font-face {
   font-family: answer;
   src: url('../../fonts/SunnyspellsRegular-MV9ze.otf');
@@ -21,7 +24,11 @@
 
 .question {
   font-family: question , sans-serif;
+<<<<<<< HEAD
   font-size: 1.25rem;
+=======
+  font-size: 1.55rem;
+>>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
   margin-bottom: 5px;
 }
 
@@ -117,7 +124,8 @@
   border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
-  font-size: 0.75rem;
+  font-family: answer , sans-serif;
+  font-size: 1.55rem;
   height: 2.5em;
   justify-content: center;
   margin: 0 10px;

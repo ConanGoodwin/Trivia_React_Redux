@@ -7,6 +7,7 @@ import './style/timer.css';
 
 const ONE_SECOND = 1000;
 const CRITICAL_TIME = 10;
+<<<<<<< HEAD
 =======
 >>>>>>> e13e208... criando arquivo timer
 =======
@@ -14,6 +15,8 @@ import './style/timer.css';
 >>>>>>> f0f1f4e... add fonts
 
 const ONE_SECOND = 1000;
+=======
+>>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
 
 class Timer extends React.Component {
   constructor() {
@@ -95,7 +98,14 @@ export default connect()(Timer);
   render() {
     const { timerCount } = this.state;
     if (timerCount === 0) { this.timeIsEnd(); }
-    return (<h1 data-testid="timer" className="time">{timerCount}</h1>);
+    return (
+      <h1
+        data-testid="timer"
+        className={ timerCount > CRITICAL_TIME ? 'time' : 'time time_critical' }
+      >
+        {timerCount}
+      </h1>
+    );
   }
 }
 
