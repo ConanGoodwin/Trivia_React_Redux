@@ -5,9 +5,13 @@
 
 .time {
   font-family: clock , sans-serif;
+<<<<<<< HEAD
   font-size: xx-large;
 }
 
 .time_critical {
   color: red;
+=======
+  font-size: xxx-large;
+>>>>>>> df7f757... add timer.css
 }
