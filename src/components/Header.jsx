@@ -61,10 +61,10 @@ class Header extends React.Component {
 >>>>>>> 5a67e08... Requisitos 12,14,15
 =======
         <p data-testid="header-player-name">{name}</p>
-        <p>
+        <p className="borderScore">
           Placar:
           {' '}
-          <span data-testid="header-score">
+          <span data-testid="header-score" className="score">
             {score}
           </span>
         </p>

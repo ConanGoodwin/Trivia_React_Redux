@@ -42,6 +42,7 @@ const WRONG_BTN = 'incorrect';
 import './style/Game.css';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 43f56a2... Adiciona requisito 7
 =======
 import Carrousel from '../components/Carrousel';
@@ -53,6 +54,12 @@ const NORMAL_BTN = 'button is-success is-outlined is-responsive';
 const CORRECT_BTN = 'button is-success is-responsive';
 const WRONG_BTN = 'button is-danger is-responsive';
 >>>>>>> f517f6b... adicionado carrousel
+=======
+
+const NORMAL_BTN = 'inicial';
+const CORRECT_BTN = 'correct';
+const WRONG_BTN = 'incorrect';
+>>>>>>> 59ad925... add fonts
 
 class Game extends Component {
   constructor() {
@@ -186,7 +193,6 @@ class Game extends Component {
 =======
         }), async () => {
           const { time } = this.state;
-          // await dispatch(userScore(score));
           await dispatch(addPlayerScore(time, difficulty, score));
         });
 >>>>>>> 5fef7a0... retirado testes
@@ -277,6 +283,7 @@ class Game extends Component {
           setTime={ this.setTime }
         />}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
         <Header />
@@ -294,6 +301,8 @@ class Game extends Component {
 =======
         {/* {(indexQuestion === 0) && (<p>new game</p>)} */}
 >>>>>>> fd55a0b... adicionado estilo a tela de login
+=======
+>>>>>>> 59ad925... add fonts
         {
           (responseCode === ERROR_API_CODE) && (delToken())
         }
@@ -404,6 +413,9 @@ class Game extends Component {
                   }
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 59ad925... add fonts
                 <div className="btnNext">
                   {(isAnswer) && (
                     <button
@@ -416,6 +428,7 @@ class Game extends Component {
                     </button>
                   )}
                 </div>
+<<<<<<< HEAD
 =======
                 {(isAnswer) && (
                   <button
@@ -427,6 +440,8 @@ class Game extends Component {
                   </button>
                 )}
 >>>>>>> fde2d08... Requisito 10
+=======
+>>>>>>> 59ad925... add fonts
               </section>
             )
         }

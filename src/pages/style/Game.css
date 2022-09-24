@@ -26,7 +26,10 @@
 }
 
 .correct {
+<<<<<<< HEAD
   animation: animate 4s linear infinite;
+=======
+>>>>>>> 59ad925... add fonts
   background-color: #48c78e;
   border: 3px solid rgb(6, 240, 15);
   color: white;
@@ -40,6 +43,7 @@
 
 .inicial {
   background-color: transparent;
+<<<<<<< HEAD
   border: 3px solid black;
   color: #48c78e;
 }
@@ -103,6 +107,30 @@
 }
 >>>>>>> 43f56a2... Adiciona requisito 7
 =======
+=======
+>>>>>>> 59ad925... add fonts
   border: 3px solid black;
+  color: #48c78e;
+}
+
+.incorrect, .inicial, .correct {
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 0.75rem;
+  height: 2.5em;
+  justify-content: center;
+  margin: 0 10px;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btnNext {
+  display: grid;
+  justify-items: right;
+  height: 39px;
+  margin-top: 10px;
+  width: 100%;
 }
 >>>>>>> fabba84... Corrige lint
