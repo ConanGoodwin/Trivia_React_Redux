@@ -25,10 +25,14 @@
 .question {
   font-family: question , sans-serif;
 <<<<<<< HEAD
+<<<<<<< HEAD
   font-size: 1.25rem;
 =======
   font-size: 1.55rem;
 >>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
+=======
+  font-size: 1.25rem;
+>>>>>>> ab5322d... acertado espaço da tela de game
   margin-bottom: 5px;
 }
 
