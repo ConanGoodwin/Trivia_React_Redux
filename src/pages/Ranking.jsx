@@ -7,6 +7,9 @@ import { addPlayerScore } from '../redux/actions';
 import PlayerCard from '../components/PlayerCard';
 import { getFromLocalStorage } from '../services/localStorage';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f0caf27... add estilo ao ranking
 import './style/ranking.css';
 
 const INITIAL_TIME = 30;
@@ -66,10 +69,14 @@ class Ranking extends Component {
           data-testid="btn-go-home"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f0caf27... add estilo ao ranking
           className="button is-link is-outlined"
           onClick={ this.handleClickGoHome }
         >
           Play Again
+<<<<<<< HEAD
         </button>
         {ranking.length > 0 && ranking
           .sort((a, b) => b.score - a.score).map((player, i) => (
@@ -82,6 +89,8 @@ class Ranking extends Component {
 >>>>>>> 5e4c69a... add dispatch zerando o placar
         >
           Tela Inicial
+=======
+>>>>>>> f0caf27... add estilo ao ranking
         </button>
 <<<<<<< HEAD
 >>>>>>> e924036... Requisitos 16 e 18

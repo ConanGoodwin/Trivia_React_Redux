@@ -8,10 +8,14 @@ export default class PlayerCard extends Component {
     return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="cabecalho playercard">
 =======
       <div className="cabecalho">
 >>>>>>> 2d82538... inserido imagem do player no ranking
+=======
+      <div className="cabecalho playercard">
+>>>>>>> f0caf27... add estilo ao ranking
         <figure className="image is-48x48">
           <img
             src={ picture }
