@@ -102,7 +102,11 @@ class Game extends Component {
 =======
       wrongClass: NORMAL_BTN,
       correctClass: NORMAL_BTN,
+<<<<<<< HEAD
 >>>>>>> f517f6b... adicionado carrousel
+=======
+      indexResp: -1,
+>>>>>>> 2caabbc... inserido indicador da resposta dada
     };
   }
 
@@ -147,6 +151,7 @@ class Game extends Component {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here', i) => {
     this.setState({
       isAnswer: true,
@@ -179,6 +184,14 @@ class Game extends Component {
 =======
       isAnswer: true, wrongClass: WRONG_BTN, correctClass: CORRECT_BTN }, () => {
 >>>>>>> f517f6b... adicionado carrousel
+=======
+  handleClickAnswer = ({ target: { name } }, difficulty = 'nothing here', i) => {
+    this.setState({
+      isAnswer: true,
+      wrongClass: WRONG_BTN,
+      correctClass: CORRECT_BTN,
+      indexResp: i }, () => {
+>>>>>>> 2caabbc... inserido indicador da resposta dada
       const { dispatch } = this.props;
       const { randomAnswer, score } = this.state;
       const filterRadomAnswer = randomAnswer
@@ -246,8 +259,13 @@ class Game extends Component {
 >>>>>>> 43f56a2... Adiciona requisito 7
 =======
         wrongClass: NORMAL_BTN,
+<<<<<<< HEAD
         correctClass: NORMAL_BTN }, () => {
 >>>>>>> f517f6b... adicionado carrousel
+=======
+        correctClass: NORMAL_BTN,
+        indexResp: -1 }, () => {
+>>>>>>> 2caabbc... inserido indicador da resposta dada
         this.shuffleAnswer(indexQuestion + 1, results);
       });
     } else {
@@ -264,10 +282,14 @@ class Game extends Component {
   render() {
     const { randomAnswer, indexQuestion, isAnswer,
 <<<<<<< HEAD
+<<<<<<< HEAD
       wrongClass, correctClass, indexResp } = this.state;
 =======
       wrongClass, correctClass } = this.state;
 >>>>>>> 43f56a2... Adiciona requisito 7
+=======
+      wrongClass, correctClass, indexResp } = this.state;
+>>>>>>> 2caabbc... inserido indicador da resposta dada
     const { results, responseCode } = this.props;
     const START_INDEX = -1;
     const ERROR_API_CODE = 3;
@@ -375,7 +397,7 @@ class Game extends Component {
 =======
                               onClick={ (e) => {
                                 const { difficulty } = results[indexQuestion];
-                                this.handleClickAnswer(e, difficulty);
+                                this.handleClickAnswer(e, difficulty, index);
                               } }
                               disabled={ isAnswer }
 <<<<<<< HEAD
@@ -384,7 +406,19 @@ class Game extends Component {
                               className={ correctClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              {this.decodeEntity(item.answer)}
+                              { (indexResp === index)
+                                ? (
+                                  <div
+                                    className="has-tooltip-arrow has-tooltip-arrow
+                                     has-tooltip-active has-tooltip-bottom"
+                                    data-tooltip="Resposta dada!"
+                                  >
+                                    { this.decodeEntity(item.answer) }
+                                    )
+                                  </div>
+                                ) : (
+                                  this.decodeEntity(item.answer)
+                                )}
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
@@ -405,14 +439,32 @@ class Game extends Component {
                               type="button"
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
                               name={ item.answer }
+<<<<<<< HEAD
                               onClick={ this.handleClickAnswer }
 <<<<<<< HEAD
 =======
+=======
+                              onClick={ (e) => {
+                                const { difficulty } = results[indexQuestion];
+                                this.handleClickAnswer(e, difficulty, index);
+                              } }
+>>>>>>> 2caabbc... inserido indicador da resposta dada
                               disabled={ isAnswer }
                               className={ wrongClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              {this.decodeEntity(item.answer)}
+                              { (indexResp === index)
+                                ? (
+                                  <div
+                                    className="has-tooltip-arrow has-tooltip-arrow
+                                     has-tooltip-active has-tooltip-bottom"
+                                    data-tooltip="Resposta dada!"
+                                  >
+                                    { this.decodeEntity(item.answer) }
+                                  </div>
+                                ) : (
+                                  this.decodeEntity(item.answer)
+                                )}
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
