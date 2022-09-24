@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+<<<<<<< HEAD
 function BtnRespText({ answer, index, results, indexResp,
   handleClickAnswer, isAnswer, correctClass, id }) {
+=======
+function BtnRespText({ answer, indexResp, index }) {
+>>>>>>> f60df1c... style: retirado erros de lint
   function decodeEntity(inputStr) {
     const textarea = document.createElement('textarea');
     textarea.innerHTML = inputStr;
@@ -10,6 +14,7 @@ function BtnRespText({ answer, index, results, indexResp,
   }
 
   return (
+<<<<<<< HEAD
     (indexResp !== index)
       ? (
         <button
@@ -45,12 +50,29 @@ function BtnRespText({ answer, index, results, indexResp,
         >
           {decodeEntity(answer)}
         </button>
+=======
+    (indexResp === index)
+      ? (
+        <div
+          className="has-tooltip-arrow has-tooltip-arrow
+           has-tooltip-active has-tooltip-bottom"
+          data-tooltip="Resposta dada!"
+        >
+          { decodeEntity(answer) }
+        </div>
+      ) : (
+        <div>
+          { decodeEntity(answer) }
+        </div>
+
+>>>>>>> f60df1c... style: retirado erros de lint
       )
   );
 }
 
 BtnRespText.propTypes = {
   answer: PropTypes.string.isRequired,
+<<<<<<< HEAD
   index: PropTypes.number.isRequired,
   handleClickAnswer: PropTypes.func.isRequired,
   isAnswer: PropTypes.bool.isRequired,
@@ -64,6 +86,10 @@ BtnRespText.propTypes = {
 
 BtnRespText.defaultProps = {
   results: '',
+=======
+  indexResp: PropTypes.string.isRequired,
+  index: PropTypes.string.isRequired,
+>>>>>>> f60df1c... style: retirado erros de lint
 };
 
 export default BtnRespText;

@@ -43,6 +43,7 @@ import './style/Game.css';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 43f56a2... Adiciona requisito 7
 =======
 import Carrousel from '../components/Carrousel';
@@ -55,6 +56,9 @@ const CORRECT_BTN = 'button is-success is-responsive';
 const WRONG_BTN = 'button is-danger is-responsive';
 >>>>>>> f517f6b... adicionado carrousel
 =======
+=======
+import BtnRespText from '../components/BtnRespText';
+>>>>>>> f60df1c... style: retirado erros de lint
 
 const NORMAL_BTN = 'inicial';
 const CORRECT_BTN = 'correct';
@@ -162,6 +166,7 @@ class Game extends Component {
       const { randomAnswer, score } = this.state;
       const filterRadomAnswer = randomAnswer
         .filter(({ isCorrect }) => isCorrect === true);
+<<<<<<< HEAD
       if (name === filterRadomAnswer[0].answer) {
         this.setState((prevState) => ({
           score: prevState.score + 1,
@@ -197,6 +202,8 @@ class Game extends Component {
       const filterRadomAnswer = randomAnswer
         .filter(({ isCorrect }) => isCorrect === true);
 
+=======
+>>>>>>> f60df1c... style: retirado erros de lint
       if (name === filterRadomAnswer[0].answer) {
         this.setState((prevState) => ({
           score: prevState.score + 1,
@@ -335,6 +342,7 @@ class Game extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h2 data-testid="question-category" className="category">
 =======
 =======
@@ -347,6 +355,8 @@ class Game extends Component {
                 <h2 data-testid="question-category">
 >>>>>>> 86b554f... consertado quotes dos textos
 =======
+=======
+>>>>>>> f60df1c... style: retirado erros de lint
                 <h2 data-testid="question-category" className="category">
 >>>>>>> 6380a25... add cor critica a tempo abaixo de 10s
                   {
@@ -406,19 +416,11 @@ class Game extends Component {
                               className={ correctClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              { (indexResp === index)
-                                ? (
-                                  <div
-                                    className="has-tooltip-arrow has-tooltip-arrow
-                                     has-tooltip-active has-tooltip-bottom"
-                                    data-tooltip="Resposta dada!"
-                                  >
-                                    { this.decodeEntity(item.answer) }
-                                    )
-                                  </div>
-                                ) : (
-                                  this.decodeEntity(item.answer)
-                                )}
+                              <BtnRespText
+                                answer={ item.answer }
+                                indexResp={ indexResp }
+                                index={ index }
+                              />
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
@@ -453,18 +455,11 @@ class Game extends Component {
                               className={ wrongClass }
 >>>>>>> 43f56a2... Adiciona requisito 7
                             >
-                              { (indexResp === index)
-                                ? (
-                                  <div
-                                    className="has-tooltip-arrow has-tooltip-arrow
-                                     has-tooltip-active has-tooltip-bottom"
-                                    data-tooltip="Resposta dada!"
-                                  >
-                                    { this.decodeEntity(item.answer) }
-                                  </div>
-                                ) : (
-                                  this.decodeEntity(item.answer)
-                                )}
+                              <BtnRespText
+                                answer={ item.answer }
+                                indexResp={ indexResp }
+                                index={ index }
+                              />
                             </button>
 >>>>>>> fde2d08... Requisito 10
                           )
