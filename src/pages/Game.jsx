@@ -389,6 +389,9 @@ class Game extends Component {
                             <BtnRespText
                               key={ index }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f58b704... feat: mega refatoração para inserir a resposta dada e registrar os pontos
                               id="correct-answer"
                               answer={ answer }
                               index={ index }
@@ -398,6 +401,7 @@ class Game extends Component {
                               correctClass={ correctClass }
                               indexResp={ indexResp }
                             />
+<<<<<<< HEAD
 =======
                               type="button"
                               data-testid="correct-answer"
@@ -423,11 +427,16 @@ class Game extends Component {
                               />
                             </button>
 >>>>>>> fde2d08... Requisito 10
+=======
+>>>>>>> f58b704... feat: mega refatoração para inserir a resposta dada e registrar os pontos
                           )
                           : (
                             <BtnRespText
                               key={ index }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f58b704... feat: mega refatoração para inserir a resposta dada e registrar os pontos
                               id={ `wrong-answer-${indexWrongAnswer}` }
                               answer={ answer }
                               index={ index }
@@ -437,6 +446,7 @@ class Game extends Component {
                               correctClass={ wrongClass }
                               indexResp={ indexResp }
                             />
+<<<<<<< HEAD
 =======
                               type="button"
                               data-testid={ `wrong-answer-${indexWrongAnswer}` }
@@ -462,6 +472,8 @@ class Game extends Component {
                               />
                             </button>
 >>>>>>> fde2d08... Requisito 10
+=======
+>>>>>>> f58b704... feat: mega refatoração para inserir a resposta dada e registrar os pontos
                           )
                       );
                     })
