@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import './style/settings.css';
 =======
 >>>>>>> Stashed changes
+=======
+import './style/settings.css';
+>>>>>>> 118f501... add estilo a tela de configurações
 
 class Settings extends Component {
   render() {
     return (
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+>>>>>>> 118f501... add estilo a tela de configurações
       <form className="sett_ings">
         <h1 data-testid="settings-title">Configurações</h1>
 
@@ -57,11 +64,14 @@ class Settings extends Component {
           Play
         </button>
       </form>
+<<<<<<< HEAD
 =======
       <div>
         <h1 data-testid="settings-title">Configuração</h1>
       </div>
 >>>>>>> Stashed changes
+=======
+>>>>>>> 118f501... add estilo a tela de configurações
     );
   }
 }
