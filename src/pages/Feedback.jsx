@@ -11,11 +11,14 @@ import { returnToTheDefaultState } from '../redux/actions';
 // import { addPlayerScore } from '../redux/actions';
 import { addToLocalStorage, getFromLocalStorage } from '../services/localStorage';
 import './style/feedback.css';
+<<<<<<< HEAD
 =======
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import { returnToTheDefaultState } from '../redux/actions';
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+>>>>>>> 55b1962... add estilo da tela de feedback
 
 const VALUE_FEEDBACK = 3;
 
@@ -92,6 +95,7 @@ class FeedBack extends Component {
 
   render() {
     const { assertions } = this.props;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> b9cf229... atualizando o ranking de acordo com o maior placar
@@ -111,11 +115,14 @@ class FeedBack extends Component {
 =======
     const { score, assertions } = this.props;
 >>>>>>> fd55a0b... adicionado estilo a tela de login
+=======
+>>>>>>> 55b1962... add estilo da tela de feedback
 
     return (
       <div>
         <Header />
         {assertions >= VALUE_FEEDBACK
+<<<<<<< HEAD
 <<<<<<< HEAD
           ? <p data-testid="feedback-text" className="done">Well Done!</p>
           : <p data-testid="feedback-text" className="better">Could be better...</p>}
@@ -131,17 +138,25 @@ class FeedBack extends Component {
 =======
           ? <p data-testid="feedback-text">Well Done!</p>
           : <p data-testid="feedback-text">Could be better...</p>}
+=======
+          ? <p data-testid="feedback-text" className="done">Well Done!</p>
+          : <p data-testid="feedback-text" className="better">Could be better...</p>}
+>>>>>>> 55b1962... add estilo da tela de feedback
         {/* <h4>Total de perguntas certas:</h4> */}
-        <p data-testid="feedback-total-score">{score}</p>
+        {/* <p data-testid="feedback-total-score">{score}</p> */}
         {/* <h4>Total de pontos:</h4> */}
-        <p data-testid="feedback-total-question">{assertions}</p>
+        <p data-testid="feedback-total-question" className="assertions">{assertions}</p>
         <button
           type="button"
           data-testid="btn-ranking"
 <<<<<<< HEAD
+<<<<<<< HEAD
           onClick={ () => history.push('/ranking') }
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
 =======
+=======
+          className="button is-success is-outlined"
+>>>>>>> 55b1962... add estilo da tela de feedback
           onClick={ this.handleClickGoRanking }
 >>>>>>> fd55a0b... adicionado estilo a tela de login
         >
@@ -151,9 +166,13 @@ class FeedBack extends Component {
           type="button"
           data-testid="btn-play-again"
 <<<<<<< HEAD
+<<<<<<< HEAD
           className="button is-link is-outlined"
 =======
 >>>>>>> 88ad2c1... o problema era uma letra maiuscula
+=======
+          className="button is-link is-outlined"
+>>>>>>> 55b1962... add estilo da tela de feedback
           onClick={ this.handleClickGoHome }
         >
           Play Again
