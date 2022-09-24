@@ -22,6 +22,7 @@ class Header extends React.Component {
           />
         </figure>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p data-testid="header-player-name" className="user">{name}</p>
         <p className="borderScore">
           <div className="subBorder">
@@ -61,6 +62,9 @@ class Header extends React.Component {
 >>>>>>> 5a67e08... Requisitos 12,14,15
 =======
         <p data-testid="header-player-name">{name}</p>
+=======
+        <p data-testid="header-player-name" className="user">{name}</p>
+>>>>>>> f0f1f4e... add fonts
         <p className="borderScore">
           Placar:
           {' '}

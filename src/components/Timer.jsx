@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './style/timer.css';
 
 const ONE_SECOND = 1000;
 const CRITICAL_TIME = 10;
 =======
 >>>>>>> e13e208... criando arquivo timer
+=======
+import './style/timer.css';
+>>>>>>> f0f1f4e... add fonts
 
 const ONE_SECOND = 1000;
 
@@ -91,7 +95,7 @@ export default connect()(Timer);
   render() {
     const { timerCount } = this.state;
     if (timerCount === 0) { this.timeIsEnd(); }
-    return (<h1 data-testid="timer">{timerCount}</h1>);
+    return (<h1 data-testid="timer" className="time">{timerCount}</h1>);
   }
 }
 
