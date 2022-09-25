@@ -32,6 +32,7 @@ class Header extends React.Component {
               {score}
             </span>
           </div>
+<<<<<<< HEAD
         </p>
 =======
     const { name, email, totalHits } = this.props;
@@ -71,6 +72,8 @@ class Header extends React.Component {
           <span data-testid="header-score" className="score">
             {score}
           </span>
+=======
+>>>>>>> dda3e88... feat: placar piscante
         </p>
 >>>>>>> 86b554f... consertado quotes dos textos
 
