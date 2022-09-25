@@ -19,6 +19,7 @@
 
 .subBorder {
 <<<<<<< HEAD
+<<<<<<< HEAD
   animation: animate2 3s linear infinite;
   border: 1px inset #888;
   border-radius: 10%;
@@ -98,6 +99,9 @@
   margin: 10px;
 =======
   animation: animate2 1.5s linear infinite;
+=======
+  animation: animate2 3s linear infinite;
+>>>>>>> 7b0b5d8... refactor: regulando pisca
   border: 1px inset #888;
 >>>>>>> dda3e88... feat: placar piscante
   padding: 5px 10px;
@@ -111,7 +115,7 @@
 }
 
 .score {
-  animation: animate 1.5s linear infinite;
+  animation: animate 3s linear infinite;
   color: yellow;
   font-family: score , sans-serif;
   font-size: xx-large;
@@ -127,7 +131,13 @@
   0%{
     opacity: 0;
   }
+  30%{
+    opacity: 0.7;
+  }
   50%{
+    opacity: 1;
+  }
+  70%{
     opacity: 0.7;
   }
   100%{
