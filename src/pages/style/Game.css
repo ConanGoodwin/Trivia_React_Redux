@@ -38,9 +38,13 @@
 
 .correct {
 <<<<<<< HEAD
+<<<<<<< HEAD
   animation: animate 4s linear infinite;
 =======
 >>>>>>> 59ad925... add fonts
+=======
+  animation: animate 4s linear infinite;
+>>>>>>> c952aee... refactor: regulando pisca
   background-color: #48c78e;
   border: 3px solid rgb(6, 240, 15);
   color: white;
